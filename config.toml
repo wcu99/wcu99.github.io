@@ -20,13 +20,12 @@ description = "记录一些杂记"
 profilePicture = "images/dog.jpg"
 keywords = ""
 # favicon = "favicons/favicon.ico"
-customCss = ["css/style.css"]
+customCss = []
 customJs = []
 displayMode = "dark"
-mainSections = ["post","docs"]
+mainSections = ["post"]
 images = ["images/3.jpg"]
 doNotLoadAnimations = false
-disqusShortname = "XXX"
 
 # Google Site Verification
 
