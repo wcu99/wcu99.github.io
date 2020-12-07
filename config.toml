@@ -19,7 +19,7 @@ author = "Wcu99"
 description = "个人杂记"
 profilePicture = "images/dog.jpg"
 keywords = ""
-favicon = "favicons/"
+favicon = "favicons/favicon.ico"
 customCss = []
 customJs = []
 mainSections = ["post"]
@@ -48,7 +48,6 @@ icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/wcu99"
 
-
 [[params.socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
@@ -75,3 +74,7 @@ url = "mailto:1694433099@qq.com"
   weight = 300
   identifier = "about"
   url = "/about/"
+
+# [params]
+
+displayMode = "dark"
