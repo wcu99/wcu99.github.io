@@ -7,11 +7,9 @@ summarylength = 10
 enableEmoji = true
 enableRobotsTXT = true
 
-Enable Disqus
 
-disqusShortname = ""
 
-Google Analytics
+# Google Analytics
 
 googleAnalytics = "UA-123-45"
 
@@ -28,19 +26,19 @@ mainSections = ["post"]
 images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false
 
-Google Site Verification
+# Google Site Verification
 
 googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
-Math settings
+# Math settings
 
 [params.math]
 enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
-Social links
+# Social links
 
-use 'fab' when brand icons, use 'fas' when standard solid icons.
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
 
 [[params.socialIcons]]
 
@@ -56,7 +54,7 @@ icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:1694433099@qq.com"
 
-Menu items
+# Menu items
 
 [menu]
 
@@ -67,7 +65,7 @@ Menu items
   url = "/"
 
   [[menu.main]]
-  name = "目录"
+  name = "归档"
   weight = 200
   identifier = "posts"
   url = "/post/"
