@@ -1,0 +1,4 @@
+baseURL = "https://wcu99.github.io/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "m10c"
