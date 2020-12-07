@@ -1,4 +1,5 @@
 baseURL = "https://wcu99.github.io/"
 languageCode = "zh"
-title = "My New Hugo Site"
+title = "wcu99博客园"
 theme = "anatole"
+
