@@ -22,8 +22,9 @@ keywords = ""
 # favicon = "favicons/favicon.ico"
 customCss = []
 customJs = []
-mainSections = ["post"]
-images = ["images/site-feature-image.png"]
+displayMode = "dark"
+mainSections = ["post","docs"]
+images = ["images/3.jpg"]
 doNotLoadAnimations = false
 
 # Google Site Verification
@@ -75,6 +76,5 @@ url = "mailto:1694433099@qq.com"
   identifier = "about"
   url = "/about/"
 
-# [params]
 
-displayMode = "dark"
+
