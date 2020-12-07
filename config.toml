@@ -1,5 +1,79 @@
 baseURL = "https://wcu99.github.io/"
 languageCode = "zh"
-title = "wcu99博客园"
+DefaultContentLanguage = "zh"
+title = "欢迎来到我的博客"
 theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
 
+Enable Disqus
+
+disqusShortname = ""
+
+Google Analytics
+
+googleAnalytics = "UA-123-45"
+
+[params]
+title = "Wcu99"
+author = "Wcu99"
+description = "个人杂记"
+profilePicture = "images/1.jpg"
+keywords = ""
+favicon = "favicons/"
+customCss = []
+customJs = []
+mainSections = ["post"]
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
+
+Google Site Verification
+
+googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+Math settings
+
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+Social links
+
+use 'fab' when brand icons, use 'fas' when standard solid icons.
+
+[[params.socialIcons]]
+
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/wcu99"
+
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:1694433099@qq.com"
+
+Menu items
+
+[menu]
+
+  [[menu.main]]
+  name = "主页"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "目录"
+  weight = 200
+  identifier = "posts"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "关于"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
