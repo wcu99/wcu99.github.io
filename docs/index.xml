@@ -6,7 +6,16 @@
     <description>Recent content on 一位野生猿的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 07 Dec 2020 17:54:27 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Dec 2020 22:09:25 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python学习日记</title>
+      <link>https://wcu99.github.io/post/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Mon, 07 Dec 2020 22:09:25 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</guid>
+      <description>记录关于python的学习日记</description>
+    </item>
+    
     <item>
       <title>测试</title>
       <link>https://wcu99.github.io/post/my-first-post/</link>
