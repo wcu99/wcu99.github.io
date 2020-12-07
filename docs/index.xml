@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>欢迎来到我的博客</title>
+    <title>一位野生猿的博客</title>
     <link>https://wcu99.github.io/</link>
-    <description>Recent content on 欢迎来到我的博客</description>
+    <description>Recent content on 一位野生猿的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 07 Dec 2020 17:54:27 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/index.xml" rel="self" type="application/rss+xml" />
