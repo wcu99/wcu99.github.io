@@ -4,6 +4,6 @@ date: 2020-12-07T22:09:25+08:00
 Description: ""
 Tags: []
 Categories: []
-DisableComments: false
+DisableComments: true
 ---
 记录关于python的学习日记
