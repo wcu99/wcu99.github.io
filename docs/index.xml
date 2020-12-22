@@ -32,6 +32,15 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     </item>
     
     <item>
+      <title>Windows环境下搭建基于Hugo的个人博客</title>
+      <link>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 06 Sep 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://wcu99.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
