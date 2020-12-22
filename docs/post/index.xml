@@ -46,13 +46,15 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     </item>
     
     <item>
-      <title></title>
+      <title>利用GitHubdesktop与pycharm更新博客文章</title>
       <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
-      <description>title: &amp;ldquo;利用GitHubdesktop与pycharm更新博客文章&amp;rdquo; date: 2020-10-1T12:22:45+08:00 draft: false
-前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。</description>
+      <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
+1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
+https://desktop.github.com/
+可能需要用到科学上网才能顺利下载，这边不做科学上网的拓展，有兴趣的可以自己去了解。</description>
     </item>
     
   </channel>
