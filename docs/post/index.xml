@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 一位野生猿的博客</title>
+    <title>Posts on 一起成长吧</title>
     <link>https://wcu99.github.io/post/</link>
-    <description>Recent content in Posts on 一位野生猿的博客</description>
+    <description>Recent content in Posts on 一起成长吧</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 01 Oct 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Oct 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PYTHON中的四种容器</title>
+      <link>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Fri, 02 Oct 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</guid>
+      <description>PYTHON中的四种容器 列表list
+元组Tuple
+字典Ddict
+集合set
+四种数据类型的比较  元组Tuple是存放固定的数据 集合set中的数据插入和遍历的时间，随数据的增多而变慢 列表List中的数据插入和查询的时间，随数据的增多而变慢 字典Ddict中的数据插入和查询的速度非常快，不会因为数据太多而变慢  ​ 元组、集合和列表占用内存较少，字典占用内存较多，字典是一种通过占用空间来换取操作速度的一种数据类型。</description>
+    </item>
+    
     <item>
       <title>利用GitHubdesktop与pycharm更新博客文章</title>
       <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>

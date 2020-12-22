@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark"><head>
+    <title> Wcu99 | PYTHON中的四种容器 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="记录一些杂记">
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+    
+    <link rel="stylesheet"
+          href="https://wcu99.github.io/css/style.min.ae4af30f6a89627b05def70e914c14cbb53a71d28a88ec8d87a40ecc7c2778e2.css"
+          integrity="sha256-rkrzD2qJYnsF3vcOkUwUy7U6cdKKiOyNh6QOzHwneOI="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://wcu99.github.io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wcu99.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
+
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://wcu99.github.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
+
+<meta name="twitter:title" content="PYTHON中的四种容器"/>
+<meta name="twitter:description" content="PYTHON中的四种容器 列表list
+元组Tuple
+字典Ddict
+集合set
+四种数据类型的比较  元组Tuple是存放固定的数据 集合set中的数据插入和遍历的时间，随数据的增多而变慢 列表List中的数据插入和查询的时间，随数据的增多而变慢 字典Ddict中的数据插入和查询的速度非常快，不会因为数据太多而变慢  ​ 元组、集合和列表占用内存较少，字典占用内存较多，字典是一种通过占用空间来换取操作速度的一种数据类型。"/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://wcu99.github.io/images/dog.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Wcu99</a></h3>
+            <div class="description">
+                <p>记录一些杂记</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="" rel="me" aria-label="">
+                    <i class=" fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/wcu99" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:1694433099@qq.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Wcu99 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">主页</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">归档</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">关于</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>PYTHON中的四种容器</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Fri, Oct 2, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time"></span>
+                    </div>
+                
+            </div>
+
+            <h2 id="python中的四种容器">PYTHON中的四种容器</h2>
+<p>列表list</p>
+<p>元组Tuple</p>
+<p>字典Ddict</p>
+<p>集合set</p>
+<h2 id="四种数据类型的比较"><strong>四种数据类型的比较</strong></h2>
+<ol>
+<li>元组Tuple是存放固定的数据</li>
+<li>集合set中的数据插入和遍历的时间，随数据的增多而变慢</li>
+<li>列表List中的数据插入和查询的时间，随数据的增多而变慢</li>
+<li>字典Ddict中的数据插入和查询的速度非常快，不会因为数据太多而变慢</li>
+</ol>
+<p>​     元组、集合和列表占用内存较少，字典占用内存较多，字典是一种通过占用空间来换取操作速度的一种数据类型。</p>
+<h2 id="列表list">列表（list）</h2>
+<p>定义：列表是一种线性表，由大量的节点组成，每一个 节点都可以存放大量的数据。
+创建：列表名=[节点，节点，节点，节点] 例如：ls=[1,2,3,4,]
+访问：列表是有序的可以通过下标来访问，从0开始
+常用方法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">列表名</span><span style="color:#f92672">.</span>append() <span style="color:#960050;background-color:#1e0010">添加一个节点</span>
+     <span style="color:#f92672">.</span>clear()  <span style="color:#960050;background-color:#1e0010">删除列表</span>
+     <span style="color:#f92672">.</span>copy()  <span style="color:#960050;background-color:#1e0010">开辟了一块新的内存，把原来的复制</span>
+     <span style="color:#f92672">.</span>count()  <span style="color:#960050;background-color:#1e0010">在数组中的重复次数</span>
+     <span style="color:#f92672">.</span>index()  <span style="color:#960050;background-color:#1e0010">查询元素在列表中第一次出现的下标。</span>
+     <span style="color:#f92672">.</span>insert()<span style="color:#960050;background-color:#1e0010">指定要插入位置和元素。</span>xxx<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;xx&#34;</span>)
+     <span style="color:#f92672">.</span>remove()<span style="color:#960050;background-color:#1e0010">移除列表中对应的元素</span>
+     <span style="color:#f92672">.</span>pop()<span style="color:#960050;background-color:#1e0010">通过下标进行移除，若不添加下标则删除最后一位</span>
+     <span style="color:#f92672">.</span>reverse()<span style="color:#960050;background-color:#1e0010">倒序</span>
+     <span style="color:#f92672">.</span>sort()<span style="color:#960050;background-color:#1e0010">按照数字大小进行排序。</span>
+     <span style="color:#f92672">.</span>extend <span style="color:#960050;background-color:#1e0010">合并列表</span> xx<span style="color:#f92672">.</span>extend(yy) <span style="color:#960050;background-color:#1e0010">对</span>xx列表进行添加yy
+     
+<span style="color:#ae81ff">123456789101112</span>
+list<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">4</span>]
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">5</span>) <span style="color:#75715e">#添加</span>
+<span style="color:#66d9ef">print</span>(list)
+ls<span style="color:#f92672">=</span>list<span style="color:#f92672">.</span>copy()<span style="color:#75715e">#浅拷贝</span>
+<span style="color:#66d9ef">print</span>(ls)
+list<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>)<span style="color:#75715e">#在list[0]处添加1</span>
+<span style="color:#66d9ef">print</span>(list)
+<span style="color:#66d9ef">print</span>(list<span style="color:#f92672">.</span>count(<span style="color:#ae81ff">1</span>))<span style="color:#75715e">#重复次数</span>
+<span style="color:#66d9ef">print</span>(list<span style="color:#f92672">.</span>index(<span style="color:#ae81ff">1</span>))<span style="color:#75715e">#第一次出现的位置的下标</span>
+list<span style="color:#f92672">.</span>sort() <span style="color:#75715e">#排序</span>
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>reverse()<span style="color:#75715e">#倒序</span>
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>extend(ls)<span style="color:#75715e">#将两个表合并</span>
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">7</span>)<span style="color:#75715e">#移除节点7，仅移除第一个</span>
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>) <span style="color:#75715e">#移除下标为0的元素</span>
+<span style="color:#66d9ef">print</span>(list)
+list<span style="color:#f92672">.</span>clear()<span style="color:#75715e">#删除该列表</span>
+<span style="color:#66d9ef">print</span>(list)
+<span style="color:#ae81ff">12345678910111213141516171819202122</span>
+</code></pre></div><h2 id="集合set">集合（set）</h2>
+<p>定义：元素唯一，不能重复，无序的，不能通过下标去访问
+创建：集合名=set（{元素，元素，元素}）例如：ss = set({1,3,4,5,6,})
+访问，由于是无序的只能通过元素名来访问
+常用方法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">集合名</span><span style="color:#f92672">.</span>add() <span style="color:#960050;background-color:#1e0010">添加一个元素</span>
+     <span style="color:#f92672">.</span>difference() <span style="color:#960050;background-color:#1e0010">差集</span>
+     <span style="color:#f92672">.</span>intersection() <span style="color:#960050;background-color:#1e0010">交集</span>
+     <span style="color:#f92672">.</span>union() <span style="color:#960050;background-color:#1e0010">并集</span>
+     <span style="color:#f92672">.</span>pop()<span style="color:#960050;background-color:#1e0010">随机移除一个元素</span>
+     <span style="color:#f92672">.</span>remove() <span style="color:#960050;background-color:#1e0010">通过元素名移除，不存在会报错</span>
+     <span style="color:#f92672">.</span>discard()<span style="color:#960050;background-color:#1e0010">移除一个元素，不存在也不报错</span>
+<span style="color:#ae81ff">1234567</span>
+s1<span style="color:#f92672">=</span>set({<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>})
+s2<span style="color:#f92672">=</span>set({<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">8</span>})
+<span style="color:#66d9ef">print</span>(s1,s2)
+s1<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">9</span>)<span style="color:#75715e">#添加</span>
+<span style="color:#66d9ef">print</span>(s1)
+s3<span style="color:#f92672">=</span>s1<span style="color:#f92672">.</span>copy()<span style="color:#75715e">#浅拷贝</span>
+<span style="color:#66d9ef">print</span>(s3)
+<span style="color:#66d9ef">print</span>(s1<span style="color:#f92672">.</span>difference(s2))<span style="color:#75715e">#差集</span>
+<span style="color:#66d9ef">print</span>(s1<span style="color:#f92672">.</span>intersection(s2))<span style="color:#75715e">#交集</span>
+<span style="color:#66d9ef">print</span>(s1<span style="color:#f92672">.</span>union(s2))<span style="color:#75715e">#并集</span>
+<span style="color:#66d9ef">print</span>(s1)
+s1<span style="color:#f92672">.</span>pop()<span style="color:#75715e">#随机删除一个元素</span>
+<span style="color:#66d9ef">print</span>(s1)
+s1<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">3</span>)<span style="color:#75715e">#移除元素3</span>
+<span style="color:#66d9ef">print</span>(s1)
+s1<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">3</span>) <span style="color:#75715e">#移除元素3，没有该元素也不报错</span>
+<span style="color:#ae81ff">12345678910111213141516</span>
+</code></pre></div><h2 id="元组tuple">元组（tuple）</h2>
+<p>定义：元组表示固定，不可变的值，不可变的类型,可以通过下标访问，<strong>如果某元素的是可变类型，那么该元组可以发生改变。比如添加了一个list。在定义元组是若只有一个元素需要在后面加上一个“，”否则会将()认为是数学中的提高优先级。</strong>
+创建：元组名=tuple((元素，))例如：a=tuple(1,) a=tuple((1,2,3,4,5,6))
+访问：元组可以通过下标来访问
+常用方法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">元组名</span> <span style="color:#f92672">.</span>count()  <span style="color:#960050;background-color:#1e0010">在数组中的重复次数</span>
+      <span style="color:#f92672">.</span>index()  <span style="color:#960050;background-color:#1e0010">查询元素在列表中第一次出现的下标</span>
+    
+<span style="color:#ae81ff">123</span>
+t1<span style="color:#f92672">=</span>tuple((<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">55</span>,))
+<span style="color:#66d9ef">print</span>(t1)
+<span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>count(<span style="color:#ae81ff">3</span>))<span style="color:#75715e">#查看3重复的次数</span>
+<span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>count(<span style="color:#ae81ff">4</span>))
+<span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>index(<span style="color:#ae81ff">55</span>))<span style="color:#75715e">#查看55所在位置的下标</span>
+<span style="color:#ae81ff">12345</span>
+</code></pre></div><h2 id="字典dict">字典（dict）</h2>
+<p>定义：字典一个二维表分为key，value。key必须是字符串，key和value之间使用“:”分隔
+创建：字典名={“key“：”value“,“key“：”value“}例如a={“name”:“xxx” “age”:“160”}
+访问：字典的访问主要通过key来访问
+常见方法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">字典名</span><span style="color:#f92672">.</span>get通过key返回对应的value
+	 <span style="color:#f92672">.</span>items成对返回对应的
+<span style="color:#66d9ef">for</span> k,v <span style="color:#f92672">in</span> xx<span style="color:#f92672">.</span>items<span style="color:#960050;background-color:#1e0010">：</span>
+    <span style="color:#66d9ef">print</span>(k,v)
+	 <span style="color:#f92672">.</span>keys返回所有的keys
+	 <span style="color:#f92672">.</span>values返回所有的values
+	 <span style="color:#f92672">.</span>pop <span style="color:#960050;background-color:#1e0010">通过</span>key来删除对应的value
+	 <span style="color:#f92672">.</span>popitem <span style="color:#960050;background-color:#1e0010">移除一对</span>key,value遵循后进先出的规则<span style="color:#960050;background-color:#1e0010">。</span>
+	 
+<span style="color:#ae81ff">123456789</span>
+a<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;郭靖&#34;</span>:<span style="color:#e6db74">&#34;黄蓉&#34;</span>,<span style="color:#e6db74">&#34;杨康&#34;</span>:<span style="color:#e6db74">&#34;穆念慈&#34;</span>,<span style="color:#e6db74">&#34;东邪&#34;</span>:<span style="color:#e6db74">&#34;冯蘅&#34;</span>}
+<span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;东邪&#34;</span>))
+<span style="color:#66d9ef">for</span> k,v <span style="color:#f92672">in</span> a<span style="color:#f92672">.</span>items():
+    <span style="color:#66d9ef">print</span>(k,v)
+<span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>keys())
+<span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>values())
+<span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;郭靖&#34;</span>))
+<span style="color:#66d9ef">print</span>(a)
+<span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>popitem())
+<span style="color:#66d9ef">print</span>(a)
+</code></pre></div>
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
