@@ -6,21 +6,7 @@
     <description>Recent content in Posts on 一位野生猿的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 07 Dec 2020 22:09:25 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python学习日记</title>
-      <link>https://wcu99.github.io/post/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</link>
-      <pubDate>Mon, 07 Dec 2020 22:09:25 +0800</pubDate>
-      
-      <guid>https://wcu99.github.io/post/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</guid>
-      <description>1.环境搭建 基于python环境搭建 1.python开发环境
-2.安装selenium
-3.安装浏览器
-4.安装浏览器驱动
-1.1安装selenium 注意：python3安装完毕并且能够正常运行
-pip工具 pip是一个通用的python包管理工具，提供了对python包的查找、下载、安装、卸载功能。</description>
-    </item>
-    
+    <lastBuildDate>Mon, 07 Sep 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MACOS环境基于hugo搭建的个人博客</title>
       <link>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
