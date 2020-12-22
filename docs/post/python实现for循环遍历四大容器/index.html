@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | Windows环境下搭建基于Hugo的个人博客 </title>
+    <title> Wcu99 | python中实现for循环遍历四大容器 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/">
 
     
     
@@ -35,12 +35,11 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="Windows环境下搭建基于Hugo的个人博客"/>
-<meta name="twitter:description" content="概述 之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接
-一、（下载hugo） 1、hugo官方下载地址https://github.com/gohugoio/hugo/releases
-2、创建文件夹。此处举例：F盘创建 hugo/bin，将解压后的**hugo.exe**放到**bin**目录下。
-3、配置系统环境变量。将**F:\hugo\bin**加到**path**变量中，以上设置好后，就可以在cmd中查看是否安装成功。执行命令：
- $ hugo version"/>
+<meta name="twitter:title" content="python中实现for循环遍历四大容器"/>
+<meta name="twitter:description" content="实现for循环遍历四大容器 #for循环 #作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）
+#格式：for 临时变量 in 容器：
+​	对临时变量的处理
+#特点：临时变量从容器中一个一个获取到"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -121,74 +120,84 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>Windows环境下搭建基于Hugo的个人博客</h3>
+                <h3>python中实现for循环遍历四大容器</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
-                        <span class="date">Thu, Feb 6, 2020</span>
+                        <span class="date">Wed, Mar 25, 2020</span>
                         <em class="fas fa-stopwatch"></em>
                         <span class="reading-time"></span>
                     </div>
                 
             </div>
 
-            <h2 id="概述">概述</h2>
-<p>之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接</p>
-<h2 id="一下载hugo">一、（下载hugo）</h2>
-<p>1、hugo官方下载地址https://github.com/gohugoio/hugo/releases</p>
-<p>2、创建文件夹。此处举例：F盘创建 <strong><code>hugo/bin</code></strong>，将解压后的**<code>hugo.exe</code>**放到**<code>bin</code>**目录下。</p>
-<p>3、配置系统环境变量。将**<code>F:\hugo\bin</code>**加到**path**变量中，以上设置好后，就可以在cmd中查看是否安装成功。执行命令：</p>
-<blockquote>
-<p>$ <strong><code>hugo version</code></strong></p>
-</blockquote>
-<p>没返回报错即代表配置成功</p>
-<h2 id="二生成站点">二、生成站点</h2>
-<blockquote>
-<p>进入<code>F:\hugo</code>下，打开命令窗口,输入</p>
-</blockquote>
-<blockquote>
-<p>$ <strong><code>hugo new site</code></strong> 文件名称 (如<code>blog</code>)</p>
-</blockquote>
-<p>执行后，在hugo目录下就会生成一个 名叫<code>myblog</code>的站点文件夹</p>
-<p>进入<code>myblog</code>，显示以下目录结构：</p>
-<ul>
-<li>archetypes　(存放default.md，头文件格式，每次新建文章默认显示的头部信息在此修改)</li>
-<li>content 　　 (存放博客文章，markdown格式文件)</li>
-<li>data (存放自定义或者导入的模板)</li>
-<li>layouts (存放网站的数据模板)</li>
-<li>static (存放图片、css、js等静态资源)</li>
-<li>themes (存放主题文件，每个主题都是一个独立的文件夹)</li>
-<li>config.toml (网站配置文件)</li>
-</ul>
-<h2 id="三创建文章">三、创建文章</h2>
-<p>进入<strong>站点根目录</strong><code>myblog</code>下，执行命令：</p>
-<blockquote>
-<p>$ <strong><code>hugo new post/test.md</code></strong></p>
-</blockquote>
-<p>执行后，会自动在content/post下生成 test.md文件，打开可编辑内容(markdown编辑器推荐Typora</p>
-<p><strong>注意：文件头部的draft要改为false，这样部署后才能看到文章。</strong></p>
-<p>当前网站是没有任何内容的，需要下载个主题。</p>
-<h2 id="四下载主题">四、下载主题</h2>
-<blockquote>
-<p>$ <strong><code>git clone</code></strong> <a href="https://github.com/vaga/hugo-theme-m10c.git">https://github.com/vaga/hugo-theme-m10c.git</a> themes/m10c</p>
-<p>也可以直接下载压缩包解压到themes目录</p>
-</blockquote>
-<p>这样themes下就多了一个文件夹，文件夹名即为主题名称。此时可回到站点目录下打开`config.tom
-配置指定主题，如theme = “m10c” 没有theme参数就自己写上</p>
-<p><strong>站点根目录</strong>下，执行命令：</p>
-<blockquote>
-<p>hugo server &ndash;theme=m10c &ndash;buildDrafts</p>
-</blockquote>
-<p>其中 &ndash;theme 选项可以指定主题，–buildDrafts 包括标记为草稿</p>
-<p>执行后会显示</p>
-<blockquote>
-<p>Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop</p>
-</blockquote>
-<p>可访问：http://localhost:1313/ 查看效果</p>
-<h2 id="五部署到原创github上">五、部署到原创GitHub上</h2>
-<p>这一部分可以查看我之前写的在macos上的操作，大同小异，这里就不做赘述了。</p>
-<p>贴上地址：https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</p>
+            <h2 id="实现for循环遍历四大容器">实现for循环遍历四大容器</h2>
+<h4 id="for循环">#for循环</h4>
+<p>#作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）</p>
+<p>#格式：for 临时变量 in 容器：</p>
+<p>​				对临时变量的处理</p>
+<p>#特点：临时变量从容器中一个一个获取到</p>
+<p>#注意：for循环中可以添加条件判断</p>
+<h4 id="定义列表">#定义列表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">100</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,true,<span style="color:#ae81ff">12.5</span>,(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>)]
 
+<span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> info_list:
+
+		<span style="color:#66d9ef">print</span>(value) 
+<span style="color:#960050;background-color:#1e0010">结果：</span>
+<span style="color:#ae81ff">100</span>
+hello
+true
+<span style="color:#ae81ff">12.5</span>
+(<span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#ae81ff">20</span>)
+
+</code></pre></div><h4 id="定义元组">#定义元组</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_tuple <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">50</span>)
+
+<span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> info_tuple:
+
+				<span style="color:#66d9ef">print</span>(value)
+<span style="color:#960050;background-color:#1e0010">结果：</span>
+<span style="color:#ae81ff">10</span>
+<span style="color:#ae81ff">20</span>
+<span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">40</span>
+<span style="color:#ae81ff">50</span>
+</code></pre></div><h4 id="定义字符串">#定义字符串</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+
+<span style="color:#66d9ef">for</span> value info_str:
+
+			<span style="color:#66d9ef">print</span>(value)
+<span style="color:#960050;background-color:#1e0010">结果：</span>
+h
+e
+l
+l
+o
+</code></pre></div><h4 id="定义字典-获取键值对的键">#定义字典 (获取键值对的“键”)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;张三&#34;</span>,<span style="color:#e6db74">&#34;age&#34;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;high&#34;</span>:<span style="color:#ae81ff">175</span>}
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> info_dict:
+
+			<span style="color:#66d9ef">print</span>(i)
+
+<span style="color:#960050;background-color:#1e0010">结果</span>:
+
+name
+
+age
+
+high
+
+<span style="color:#960050;background-color:#1e0010">同时获取键值方法</span>
+info_dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;张三&#34;</span>,<span style="color:#e6db74">&#34;age&#34;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;high&#34;</span>:<span style="color:#ae81ff">175</span>}
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> info_dict:
+
+			<span style="color:#66d9ef">print</span>(i,info_dict[i])
+
+</code></pre></div>
         </div>
         <div class="post-footer">
             <div class="info">

@@ -1,6 +1,6 @@
 ---
 title: "Windows环境下搭建基于Hugo的个人博客"
-date: 2020-09-06T12:22:45+08:00
+date: 2020-02-06T12:22:45+08:00
 draft: false
 ---
 
@@ -13,8 +13,6 @@ draft: false
 ## 一、（下载hugo）
 
 1、hugo官方下载地址https://github.com/gohugoio/hugo/releases
-
-这个很慢，所以（你懂得）
 
 2、创建文件夹。此处举例：F盘创建 **`hugo/bin`**，将解压后的**`hugo.exe`**放到**`bin`**目录下。
 
@@ -71,8 +69,6 @@ draft: false
 
 执行后会显示
 
-> …此处省略上方信息
->
 > Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop
 
 可访问：http://localhost:1313/ 查看效果

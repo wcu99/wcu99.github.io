@@ -6,32 +6,7 @@
     <description>Recent content in Posts on 一起成长吧</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 02 Oct 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PYTHON中的四种容器</title>
-      <link>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</link>
-      <pubDate>Fri, 02 Oct 2020 12:22:45 +0800</pubDate>
-      
-      <guid>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</guid>
-      <description>PYTHON中的四种容器 列表list
-元组Tuple
-字典Ddict
-集合set
-四种数据类型的比较  元组Tuple是存放固定的数据 集合set中的数据插入和遍历的时间，随数据的增多而变慢 列表List中的数据插入和查询的时间，随数据的增多而变慢 字典Ddict中的数据插入和查询的速度非常快，不会因为数据太多而变慢  ​ 元组、集合和列表占用内存较少，字典占用内存较多，字典是一种通过占用空间来换取操作速度的一种数据类型。</description>
-    </item>
-    
-    <item>
-      <title>利用GitHubdesktop与pycharm更新博客文章</title>
-      <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Thu, 01 Oct 2020 12:22:45 +0800</pubDate>
-      
-      <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
-      <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
-1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
-https://desktop.github.com/
-可能需要用到科学上网才能顺利下载，这边不做科学上网的拓展，有兴趣的可以自己去了解。</description>
-    </item>
-    
+    <lastBuildDate>Mon, 07 Sep 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基于python环境搭建selenium自动化测试框架</title>
       <link>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</link>
@@ -47,14 +22,50 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     </item>
     
     <item>
+      <title>python中实现for循环遍历四大容器</title>
+      <link>https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Wed, 25 Mar 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</guid>
+      <description>实现for循环遍历四大容器 #for循环 #作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）
+#格式：for 临时变量 in 容器：
+​	对临时变量的处理
+#特点：临时变量从容器中一个一个获取到</description>
+    </item>
+    
+    <item>
+      <title>PYTHON中的四种容器</title>
+      <link>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Sat, 21 Mar 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</guid>
+      <description>PYTHON中的四种容器 列表list
+元组Tuple
+字典Ddict
+集合set
+四种数据类型的比较  元组Tuple是存放固定的数据 集合set中的数据插入和遍历的时间，随数据的增多而变慢 列表List中的数据插入和查询的时间，随数据的增多而变慢 字典Ddict中的数据插入和查询的速度非常快，不会因为数据太多而变慢  ​ 元组、集合和列表占用内存较少，字典占用内存较多，字典是一种通过占用空间来换取操作速度的一种数据类型。</description>
+    </item>
+    
+    <item>
+      <title>利用GitHubdesktop与pycharm更新博客文章</title>
+      <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Wed, 11 Mar 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
+      <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
+1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
+https://desktop.github.com/
+可能需要用到科学上网才能顺利下载，这边不做科学上网的拓展，有兴趣的可以自己去了解。</description>
+    </item>
+    
+    <item>
       <title>Windows环境下搭建基于Hugo的个人博客</title>
       <link>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sun, 06 Sep 2020 12:22:45 +0800</pubDate>
+      <pubDate>Thu, 06 Feb 2020 12:22:45 +0800</pubDate>
       
       <guid>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接
 一、（下载hugo） 1、hugo官方下载地址https://github.com/gohugoio/hugo/releases
-这个很慢，所以（你懂得）
 2、创建文件夹。此处举例：F盘创建 hugo/bin，将解压后的**hugo.exe**放到**bin**目录下。
 3、配置系统环境变量。将**F:\hugo\bin**加到**path**变量中，以上设置好后，就可以在cmd中查看是否安装成功。执行命令：
  $ hugo version</description>
@@ -63,7 +74,7 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     <item>
       <title>MACOS环境基于hugo搭建的个人博客</title>
       <link>https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Tue, 01 Sep 2020 12:22:45 +0800</pubDate>
+      <pubDate>Sat, 01 Feb 2020 12:22:45 +0800</pubDate>
       
       <guid>https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 Hugo 是基于go语言搭建起来的一个静态博客
