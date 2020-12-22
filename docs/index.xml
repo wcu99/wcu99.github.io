@@ -13,7 +13,12 @@
       <pubDate>Mon, 07 Dec 2020 22:09:25 +0800</pubDate>
       
       <guid>https://wcu99.github.io/post/python%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</guid>
-      <description>记录关于python的学习日记</description>
+      <description>1.环境搭建 基于python环境搭建 1.python开发环境
+2.安装selenium
+3.安装浏览器
+4.安装浏览器驱动
+1.1安装selenium 注意：python3安装完毕并且能够正常运行
+pip工具 pip是一个通用的python包管理工具，提供了对python包的查找、下载、安装、卸载功能。</description>
     </item>
     
     <item>
@@ -24,6 +29,20 @@
       <guid>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 Hugo 是基于go语言搭建起来的一个静态博客
 搭建前的准备： 一、Mac os下推荐使用brew这个工具进行安装，下文使用到的也是brew命令安装Hugo。 二、安装Hugo 打开终端，使用命令：brew install Hugo，等待进度条结束即可。</description>
+    </item>
+    
+    <item>
+      <title>基于python环境搭建selenium自动化测试框架</title>
+      <link>https://wcu99.github.io/post/my-first-post/</link>
+      <pubDate>Mon, 07 Sep 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/my-first-post/</guid>
+      <description>1.环境搭建 基于python环境搭建 1.python开发环境
+2.安装selenium
+3.安装浏览器
+4.安装浏览器驱动
+1.1安装selenium 注意：python3安装完毕并且能够正常运行
+pip工具 pip是一个通用的python包管理工具，提供了对python包的查找、下载、安装、卸载功能。</description>
     </item>
     
     <item>
