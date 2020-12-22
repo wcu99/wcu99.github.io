@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 一位野生猿的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 07 Sep 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用GitHubdesktop与pycharm更新博客文章</title>
+      <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Thu, 01 Oct 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
+      <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
+1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
+https://desktop.github.com/
+可能需要用到科学上网才能顺利下载，这边不做科学上网的拓展，有兴趣的可以自己去了解。</description>
+    </item>
+    
     <item>
       <title>基于python环境搭建selenium自动化测试框架</title>
       <link>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</link>
@@ -43,18 +55,6 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
       <guid>https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 Hugo 是基于go语言搭建起来的一个静态博客
 搭建前的准备： 一、Mac os下推荐使用brew这个工具进行安装，下文使用到的也是brew命令安装Hugo。 二、安装Hugo 打开终端，使用命令：brew install Hugo，等待进度条结束即可。</description>
-    </item>
-    
-    <item>
-      <title>利用GitHubdesktop与pycharm更新博客文章</title>
-      <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
-      <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
-1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
-https://desktop.github.com/
-可能需要用到科学上网才能顺利下载，这边不做科学上网的拓展，有兴趣的可以自己去了解。</description>
     </item>
     
   </channel>
