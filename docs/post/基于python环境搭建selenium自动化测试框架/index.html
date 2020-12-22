@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | Posts </title>
+    <title> Wcu99 | 基于python环境搭建selenium自动化测试框架 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,10 +22,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/post/">
+    <link rel="canonical" href="https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="https://wcu99.github.io/post/index.xml" title="一位野生猿的博客" />
     
     
     
@@ -36,8 +35,13 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="记录一些杂记"/>
+<meta name="twitter:title" content="基于python环境搭建selenium自动化测试框架"/>
+<meta name="twitter:description" content="1.环境搭建 基于python环境搭建 1.python开发环境
+2.安装selenium
+3.安装浏览器
+4.安装浏览器驱动
+1.1安装selenium 注意：python3安装完毕并且能够正常运行
+pip工具 pip是一个通用的python包管理工具，提供了对python包的查找、下载、安装、卸载功能。"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -92,7 +96,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/post/"
                         
                    title="">归档</a></li>
@@ -114,30 +118,74 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-    <div class="archive  animated fadeInDown ">
-        <ul class="list-with-title">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>基于python环境搭建selenium自动化测试框架</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Mon, Sep 7, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time"></span>
+                    </div>
+                
+            </div>
+
+            <h1 id="1环境搭建">1.环境搭建</h1>
+<h4 id="基于python环境搭建">基于python环境搭建</h4>
+<p>1.python开发环境</p>
+<p>2.安装selenium</p>
+<p>3.安装浏览器</p>
+<p>4.安装浏览器驱动</p>
+<h1 id="11安装selenium">1.1安装selenium</h1>
+<p>注意：python3安装完毕并且能够正常运行</p>
+<h3 id="pip工具">pip工具</h3>
+<p>pip是一个通用的python包管理工具，提供了对python包的查找、下载、安装、卸载功能。</p>
+<h4 id="安装">安装</h4>
+<p>pip install selenium</p>
+<h4 id="卸载">卸载</h4>
+<p>pip uninstall selenium</p>
+<h1 id="12安装浏览器">1.2安装浏览器</h1>
+<p>常见的火狐、谷歌、microsoft edge等都可以</p>
+<h1 id="13安装浏览器驱动driver">1.3安装浏览器驱动driver</h1>
+<p>方法：可以去GitHub上面找对应版本的浏览器驱动，也可以用搜索引擎搜索对应驱动</p>
+<h1 id="2尝试使用selenium">2.尝试使用selenium</h1>
+<p>1.导包</p>
+<p>​	from selenium import webdriver</p>
+<p>2.创建浏览器驱动对象</p>
+<p>​	Firefox浏览器：driver = webdriver.Firefox()</p>
+<p>​	Chrome浏览器：driver = webdriver.Chrome()</p>
+<p>​	Edge浏览器：driver = webdriver.Edge()</p>
+<p>3.打开web页面</p>
+<p>​	driver.get(&ldquo;<a href="http://www.baidu.com">http://www.baidu.com</a>&rdquo;)</p>
+<p>4.暂停</p>
+<p>​	time.sleep(3)</p>
+<p>5.关闭驱动对象</p>
+<p>​	driver.quite()</p>
+<h4 id="例子调用firefox浏览器打开百度停止三秒后退出浏览器">例子：调用Firefox浏览器打开百度，停止三秒后退出浏览器</h4>
+<p>代码：</p>
+<p>from selenium import webdriver</p>
+<p>driver = webdriver.Firefox()</p>
+<p>driver.get(&ldquo;<a href="http://www.baidu.com">http://www.baidu.com</a>&rdquo;)</p>
+<p>time.sleep(3)</p>
+<p>driver.quite()</p>
+<p>上述例子成功之后，表明selenium环境已搭建好~</p>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
             
-                <div class="listing-title">2020</div>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" title="基于python环境搭建selenium自动化测试框架">基于python环境搭建selenium自动化测试框架</a>
-                                <div class="post-time"><span class="date">Sep 7</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="MACOS环境基于hugo搭建的个人博客">MACOS环境基于hugo搭建的个人博客</a>
-                                <div class="post-time"><span class="date">Sep 7</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-            
-        </ul>
+        
     </div>
+
 
         </div>
     </div>
