@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | Posts </title>
+    <title> Wcu99 | MACOS环境基于hugo搭建的个人博客 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,10 +22,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/post/">
+    <link rel="canonical" href="https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="https://wcu99.github.io/post/index.xml" title="一位野生猿的博客" />
     
     
     
@@ -36,8 +35,9 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="记录一些杂记"/>
+<meta name="twitter:title" content="MACOS环境基于hugo搭建的个人博客"/>
+<meta name="twitter:description" content="概述 Hugo 是基于go语言搭建起来的一个静态博客
+搭建前的准备： 一、Mac os下推荐使用brew这个工具进行安装，下文使用到的也是brew命令安装Hugo。 二、安装Hugo 打开终端，使用命令：brew install Hugo，等待进度条结束即可。"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -92,7 +92,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/post/"
                         
                    title="">归档</a></li>
@@ -114,49 +114,76 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-    <div class="archive  animated fadeInDown ">
-        <ul class="list-with-title">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>MACOS环境基于hugo搭建的个人博客</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Tue, Sep 1, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time"></span>
+                    </div>
+                
+            </div>
+
+            <h2 id="概述">概述</h2>
+<p>Hugo 是基于go语言搭建起来的一个静态博客</p>
+<h2 id="搭建前的准备">搭建前的准备：</h2>
+<h4 id="一mac-os下推荐使用brew这个工具进行安装下文使用到的也是brew命令安装hugo">一、Mac os下推荐使用brew这个工具进行安装，下文使用到的也是brew命令安装Hugo。</h4>
+<h4 id="二安装hugo">二、安装Hugo</h4>
+<p>打开终端，使用命令：brew install Hugo，等待进度条结束即可。</p>
+<h4 id="三检查是否安装成功">三、检查是否安装成功</h4>
+<p>终端下输入：hugo version</p>
+<p>返回：Hugo static site generator v：xxx   表示安装成功。</p>
+<h2 id="开始搭建博客">开始搭建博客</h2>
+<h4 id="一生成博客">一、生成博客</h4>
+<p>终端输入：hugo new 博客所在主文件名</p>
+<p>例如：hugo new myblog</p>
+<h4 id="二下载并设置主题">二、下载并设置主题</h4>
+<p>主题下载地址：themes.hugo.io</p>
+<p>安装主题：两种方法</p>
+<p>1⃣️终端切到博客根目录，输入命令git clone 你所选用的主题的github地址</p>
+<p>2⃣️主题页面提供的安装命令</p>
+<p>下载完成后主题在themes文件夹下</p>
+<h4 id="三本地启动博客">三、本地启动博客</h4>
+<p>终端输入：hugo server -t 主题名 –buildDrafts</p>
+<p>使用返回的地址在浏览器上预览博客主页。</p>
+<h4 id="四创建博客文章">四、创建博客文章</h4>
+<p>可以在终端博客跟目录输入：hugo new 文章目录/文章名.md</p>
+<p>例如：hugo new post/test.md</p>
+<p>创建完成后可用vim命令修改文章内容也可以用适配md格式的软件进行编辑。</p>
+<h2 id="将个人博客部署到远端服务器以github为例">将个人博客部署到远端服务器，以GitHub为例</h2>
+<h4 id="一github-新建repository">一、GitHub 新建repository</h4>
+<h4 id="二将个人博客部署到github仓库">二、将个人博客部署到GitHub仓库</h4>
+<p>1⃣️终端输入：hugo &ndash;theme=主题名 &ndash;baseurl=“仓库地址” &ndash;buildDrafts</p>
+<p>完成后会生成一个public文件夹。</p>
+<p>2⃣️切换到public文件下，输入：</p>
+<p>git init</p>
+<p>git add .</p>
+<p>git commit -m &ldquo;提交的描述&rdquo;</p>
+<p>3⃣️本地public文件和远程GitHub关联</p>
+<p>git remote add origin 仓库地址.git</p>
+<p>4⃣️推送到仓库</p>
+<p>git push 如果这个命令提示失败也可以尝试下面的命令</p>
+<p>git push -u origin master 然后按照提示输入GitHub的账户密码</p>
+<h2 id="至此个人静态博客部署完成">至此个人静态博客部署完成</h2>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
             
-                <div class="listing-title">2020</div>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" title="基于python环境搭建selenium自动化测试框架">基于python环境搭建selenium自动化测试框架</a>
-                                <div class="post-time"><span class="date">Sep 7</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Windows环境下搭建基于Hugo的个人博客">Windows环境下搭建基于Hugo的个人博客</a>
-                                <div class="post-time"><span class="date">Sep 6</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="MACOS环境基于hugo搭建的个人博客">MACOS环境基于hugo搭建的个人博客</a>
-                                <div class="post-time"><span class="date">Sep 1</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-            
-                <div class="listing-title">0001</div>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" title=""></a>
-                                <div class="post-time"><span class="date">Jan 1</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-            
-        </ul>
+        
     </div>
+
 
         </div>
     </div>
