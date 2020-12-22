@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | Posts </title>
+    <title> Wcu99 | python中for循环的完整语法 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,10 +22,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/post/">
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="https://wcu99.github.io/post/index.xml" title="一起成长吧" />
     
     
     
@@ -36,8 +35,10 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="记录一些杂记"/>
+<meta name="twitter:title" content="python中for循环的完整语法"/>
+<meta name="twitter:description" content="python中for循环的完整语法 #for循环的完整语法,for&hellip;else语法 #1.作用： 遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分
+#2.格式： for 临时变量 in 容器:
+​	对临时变量的处理"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -92,7 +93,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/post/"
                         
                    title="">归档</a></li>
@@ -114,78 +115,75 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-    <div class="archive  animated fadeInDown ">
-        <ul class="list-with-title">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>python中for循环的完整语法</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Fri, Mar 27, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time"></span>
+                    </div>
+                
+            </div>
+
+            <h3 id="python中for循环的完整语法">python中for循环的完整语法</h3>
+<h4 id="for循环的完整语法forelse语法">#for循环的完整语法,for&hellip;else语法</h4>
+<h4 id="1作用">#1.作用：</h4>
+<p>遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分</p>
+<h4 id="2格式">#2.格式：</h4>
+<p>for 临时变量 in 容器:</p>
+<p>​	对临时变量的处理</p>
+<p>​	满足条件时，执行break语句</p>
+<p>else:</p>
+<p>​	在上面for循环中没有执行break语句，容器遍历完，一定会执行else部分</p>
+<h4 id="例子">例子</h4>
+<pre><code>#定义列表
+
+info_list = [10,20,30,40,50,60]
+
+#使用for循环完整语法格式遍历列表
+
+​	查找数据30
+
+​	如果找到30，停止遍历
+
+​	如果容器遍历完成也没有找到，结束
+
+find_data = 30
+
+for value in info_list:
+
+​	print(value)
+
+​	if value==find_data:
+
+​	print(value)
+
+  #已经找到数据，停止遍历
+
+​	break
+
+else:
+
+​	print(“没有找到需要的数据”)
+</code></pre>
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
             
-                <div class="listing-title">2020</div>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" title="基于python环境搭建selenium自动化测试框架">基于python环境搭建selenium自动化测试框架</a>
-                                <div class="post-time"><span class="date">Sep 7</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/" title="python中for循环完整语法应用场景的例子">python中for循环完整语法应用场景的例子</a>
-                                <div class="post-time"><span class="date">Mar 28</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/" title="python中for循环的完整语法">python中for循环的完整语法</a>
-                                <div class="post-time"><span class="date">Mar 27</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/" title="python中实现for循环遍历四大容器">python中实现for循环遍历四大容器</a>
-                                <div class="post-time"><span class="date">Mar 25</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/" title="PYTHON中的四种容器">PYTHON中的四种容器</a>
-                                <div class="post-time"><span class="date">Mar 21</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" title="利用GitHubdesktop与pycharm更新博客文章">利用GitHubdesktop与pycharm更新博客文章</a>
-                                <div class="post-time"><span class="date">Mar 11</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Windows环境下搭建基于Hugo的个人博客">Windows环境下搭建基于Hugo的个人博客</a>
-                                <div class="post-time"><span class="date">Feb 6</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="MACOS环境基于hugo搭建的个人博客">MACOS环境基于hugo搭建的个人博客</a>
-                                <div class="post-time"><span class="date">Feb 1</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-            
-        </ul>
+        
     </div>
+
 
         </div>
     </div>

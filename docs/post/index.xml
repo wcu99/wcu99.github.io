@@ -22,6 +22,26 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     </item>
     
     <item>
+      <title>python中for循环完整语法应用场景的例子</title>
+      <link>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</link>
+      <pubDate>Sat, 28 Mar 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</guid>
+      <description>目标： python中for循环完整语法应用场景的例子 在遍历嵌套的数据类型时，例如：一个列表中包含了多个字典 需求：判断某一个字典中是否存在指定的值， 如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示 字典一般用来保存一个人物或事务的完整信息 info_list = [ {&amp;#39;name&amp;#39;:&amp;#34;西门二狗&amp;#34;,&amp;#39;age&amp;#39;:20,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;上官翠花&amp;#34;,&amp;#39;age&amp;#39;:20,&amp;#34;sex&amp;#34;:&amp;#39;女&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;公孙大猫&amp;#34;,&amp;#39;age&amp;#39;:25,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;慕容饭桶&amp;#34;,&amp;#39;age&amp;#39;:30,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;} ] # 定义变量保存要查询的人物名字 find_name = &amp;#39;上官翠花&amp;#39; for i in info_list: # 临时变量i获取的是列表中一个一个的字典，通过get获取名字 if i.</description>
+    </item>
+    
+    <item>
+      <title>python中for循环的完整语法</title>
+      <link>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Fri, 27 Mar 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</guid>
+      <description>python中for循环的完整语法 #for循环的完整语法,for&amp;hellip;else语法 #1.作用： 遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分
+#2.格式： for 临时变量 in 容器:
+​	对临时变量的处理</description>
+    </item>
+    
+    <item>
       <title>python中实现for循环遍历四大容器</title>
       <link>https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Wed, 25 Mar 2020 12:22:45 +0800</pubDate>
