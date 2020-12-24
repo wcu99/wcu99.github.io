@@ -22,6 +22,20 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     </item>
     
     <item>
+      <title>接口测试笔记01</title>
+      <link>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</link>
+      <pubDate>Mon, 06 Apr 2020 12:22:45 +0800</pubDate>
+      
+      <guid>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</guid>
+      <description>接口测试 A、是什么？ 测试后端实现是否符合接口规范
+B、为什么？ 程序安全、效率
+C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看响应
+要素1：定位服务器资源(通过URL实现:http://www.baidu.com|http://127.0.0.1:8000/资源路径)
+要素2：模拟用户提交数据
+要素3:查看响应的结果是否符合预期</description>
+    </item>
+    
+    <item>
       <title>python中for循环完整语法应用场景的例子</title>
       <link>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</link>
       <pubDate>Sat, 28 Mar 2020 12:22:45 +0800</pubDate>
