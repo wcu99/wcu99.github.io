@@ -16,7 +16,7 @@ googleAnalytics = "UA-123-45"
 [params]
 title = "Wcu99"
 author = "Wcu99"
-description = "随便写点东西"
+description = "记录一些学习笔记"
 profilePicture = "images/dog.jpg"
 keywords = ""
 # favicon = "favicons/favicon.ico"
