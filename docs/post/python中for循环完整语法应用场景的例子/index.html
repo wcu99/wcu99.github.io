@@ -3,13 +3,13 @@
     <title> Wcu99 | python中for循环完整语法应用场景的例子 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.89.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="记录一些学习笔记">
     <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
     
     <link rel="stylesheet"
-          href="https://wcu99.github.io/css/style.min.ae4af30f6a89627b05def70e914c14cbb53a71d28a88ec8d87a40ecc7c2778e2.css"
-          integrity="sha256-rkrzD2qJYnsF3vcOkUwUy7U6cdKKiOyNh6QOzHwneOI="
+          href="https://wcu99.github.io/css/style.min.ee660ba8d69bc4ac1dee44ba152a17bb18096f21c21645fa172af75b1b794e80.css"
+          integrity="sha256-7mYLqNabxKwd7kS6FSoXuxgJbyHCFkX6Fyr3Wxt5ToA="
           crossorigin="anonymous"
           type="text/css"><link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
@@ -29,8 +29,8 @@
     
     
     <script type="text/javascript"
-            src="https://wcu99.github.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
-            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            src="https://wcu99.github.io/js/anatole-header.min.7fccea9612e197b0736c6262484db9af65cc9e9c1f1ea31ab6321016549ecff7.js"
+            integrity="sha256-f8zqlhLhl7BzbGJiSE25r2XMnpwfHqMatjIQFlSez/c="
             crossorigin="anonymous"></script>
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
@@ -71,7 +71,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Wcu99 2020 </div>
+        <div class="by_farbox">&copy; Wcu99 2021 </div>
     </div>
 </div>
 <div class="main">
@@ -123,7 +123,7 @@
                         <em class="fas fa-calendar-day"></em>
                         <span class="date">Sat, Mar 28, 2020</span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time"></span>
+                        <span class="reading-time">1分钟阅读时间</span>
                     </div>
                 
             </div>
@@ -133,7 +133,7 @@
 <h4 id="需求判断某一个字典中是否存在指定的值">需求：判断某一个字典中是否存在指定的值，</h4>
 <h4 id="如果存在提示并且退出循环如果不存在在循环整体结束后给出一个统一的提示">如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示</h4>
 <h4 id="字典一般用来保存一个人物或事务的完整信息">字典一般用来保存一个人物或事务的完整信息</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_list <span style="color:#f92672">=</span> [
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_list <span style="color:#f92672">=</span> [
 {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;西门二狗&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
 {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;上官翠花&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;女&#39;</span>},
 {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;公孙大猫&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">25</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
@@ -146,11 +146,11 @@ find_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;
     <span style="color:#75715e"># 临时变量i获取的是列表中一个一个的字典，通过get获取名字</span>
     <span style="color:#66d9ef">if</span> i<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;name&#39;</span>)<span style="color:#f92672">==</span>find_name:
     <span style="color:#75715e"># 如果存在，提示并且退出循环</span>
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;已经找到姓名是：</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">的信息了&#39;</span> <span style="color:#f92672">%</span>i<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;name&#39;</span>))
+        print(<span style="color:#e6db74">&#39;已经找到姓名是：</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">的信息了&#39;</span> <span style="color:#f92672">%</span>i<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;name&#39;</span>))
     <span style="color:#75715e"># 已经找到人物了，退出循环</span>
         <span style="color:#66d9ef">break</span>
 <span style="color:#66d9ef">else</span>:
-     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;没有找到姓名是</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">的信息&#34;</span><span style="color:#f92672">%</span>find_name)
+     print(<span style="color:#e6db74">&#34;没有找到姓名是</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">的信息&#34;</span><span style="color:#f92672">%</span>find_name)
     <span style="color:#75715e"># 如果不存在，循环结束后得到提示</span>
 </code></pre></div>
         </div>
@@ -172,21 +172,21 @@ find_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;
 </div>
 
 <script type="text/javascript"
-        src="https://wcu99.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
-        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        src="https://wcu99.github.io/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js"
+        integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ="
         crossorigin="anonymous"></script>
 
 
 
 
 <script type="text/javascript"
-        src="https://wcu99.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
-        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        src="https://wcu99.github.io/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js"
+        integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2&#43;LqU="
         crossorigin="anonymous"></script>
 
 <script type="text/javascript"
-        src="https://wcu99.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
-        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        src="https://wcu99.github.io/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
         crossorigin="anonymous"></script>
 
 <script type="application/javascript">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | python中实现for循环遍历四大容器 </title>
+    <title> Wcu99 | loading </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.89.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/">
+    <link rel="canonical" href="https://wcu99.github.io/post/loading/">
 
     
     
@@ -35,11 +35,8 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="python中实现for循环遍历四大容器"/>
-<meta name="twitter:description" content="实现for循环遍历四大容器 #for循环 #作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）
-#格式：for 临时变量 in 容器：
-​	对临时变量的处理
-#特点：临时变量从容器中一个一个获取到"/>
+<meta name="twitter:title" content="loading"/>
+<meta name="twitter:description" content="waiting "/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -120,85 +117,19 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>python中实现for循环遍历四大容器</h3>
+                <h3>loading</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
-                        <span class="date">Wed, Mar 25, 2020</span>
+                        <span class="date">Tue, Nov 23, 2021</span>
                         <em class="fas fa-stopwatch"></em>
                         <span class="reading-time">1分钟阅读时间</span>
                     </div>
                 
             </div>
 
-            <h2 id="实现for循环遍历四大容器">实现for循环遍历四大容器</h2>
-<h4 id="for循环">#for循环</h4>
-<p>#作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）</p>
-<p>#格式：for 临时变量 in 容器：</p>
-<p>​				对临时变量的处理</p>
-<p>#特点：临时变量从容器中一个一个获取到</p>
-<p>#注意：for循环中可以添加条件判断
-#注意：for循环不能遍历数字，浮点数，布尔类型这样不可遍历的类型</p>
-<h4 id="定义列表">#定义列表</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">100</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,true,<span style="color:#ae81ff">12.5</span>,(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>)]
+            <h2 id="waiting">waiting</h2>
 
-<span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> info_list:
-
-		print(value) 
-结果<span style="color:#960050;background-color:#1e0010">：</span>
-<span style="color:#ae81ff">100</span>
-hello
-true
-<span style="color:#ae81ff">12.5</span>
-(<span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#ae81ff">20</span>)
-
-</code></pre></div><h4 id="定义元组">#定义元组</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_tuple <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">50</span>)
-
-<span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> info_tuple:
-
-				print(value)
-结果<span style="color:#960050;background-color:#1e0010">：</span>
-<span style="color:#ae81ff">10</span>
-<span style="color:#ae81ff">20</span>
-<span style="color:#ae81ff">30</span>
-<span style="color:#ae81ff">40</span>
-<span style="color:#ae81ff">50</span>
-</code></pre></div><h4 id="定义字符串">#定义字符串</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
-
-<span style="color:#66d9ef">for</span> value info_str:
-
-			print(value)
-结果<span style="color:#960050;background-color:#1e0010">：</span>
-h
-e
-l
-l
-o
-</code></pre></div><h4 id="定义字典-获取键值对的键">#定义字典 (获取键值对的“键”)</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;张三&#34;</span>,<span style="color:#e6db74">&#34;age&#34;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;high&#34;</span>:<span style="color:#ae81ff">175</span>}
-
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> info_dict:
-
-			print(i)
-
-结果:
-
-name
-
-age
-
-high
-
-同时获取键值方法
-info_dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;张三&#34;</span>,<span style="color:#e6db74">&#34;age&#34;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;high&#34;</span>:<span style="color:#ae81ff">175</span>}
-
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> info_dict:
-
-			print(i,info_dict[i])
-
-</code></pre></div>
         </div>
         <div class="post-footer">
             <div class="info">
