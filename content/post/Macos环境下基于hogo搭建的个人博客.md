@@ -1,5 +1,5 @@
 ---
-title: "MACOS环境基于hugo搭建的个人博客"
+title: "MACOS环境hugo搭建的个人博客"
 date: 2020-02-01T12:22:45+08:00
 draft: false
 ---

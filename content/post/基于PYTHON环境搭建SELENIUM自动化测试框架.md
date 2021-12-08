@@ -1,5 +1,5 @@
 ---
-title: "基于python环境搭建selenium自动化测试框架"
+title: "python环境搭建selenium自动化测试框架"
 date: 2020-09-07T12:22:45+08:00
 draft: false
 ---
