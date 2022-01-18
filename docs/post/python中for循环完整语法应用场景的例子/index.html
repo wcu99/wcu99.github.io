@@ -3,7 +3,7 @@
     <title> Wcu99 | python中for循环完整语法应用场景的例子 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.89.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.91.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="记录一些学习笔记">
     <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
     
@@ -36,7 +36,7 @@
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
 <meta name="twitter:title" content="python中for循环完整语法应用场景的例子"/>
-<meta name="twitter:description" content="目标： python中for循环完整语法应用场景的例子 在遍历嵌套的数据类型时，例如：一个列表中包含了多个字典 需求：判断某一个字典中是否存在指定的值， 如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示 字典一般用来保存一个人物或事务的完整信息 info_list = [ {&#39;name&#39;:&#34;西门二狗&#34;,&#39;age&#39;:20,&#34;sex&#34;:&#39;男&#39;}, {&#39;name&#39;:&#34;上官翠花&#34;,&#39;age&#39;:20,&#34;sex&#34;:&#39;女&#39;}, {&#39;name&#39;:&#34;公孙大猫&#34;,&#39;age&#39;:25,&#34;sex&#34;:&#39;男&#39;}, {&#39;name&#39;:&#34;慕容饭桶&#34;,&#39;age&#39;:30,&#34;sex&#34;:&#39;男&#39;} ] # 定义变量保存要查询的人物名字 find_name = &#39;上官翠花&#39; for i in info_list: # 临时变量i获取的是列表中一个一个的字典，通过get获取名字 if i."/>
+<meta name="twitter:description" content="目标： python中for循环完整语法应用场景的例子 在遍历嵌套的数据类型时，例如：一个列表中包含了多个字典 需求：判断某一个字典中是否存在指定的值， 如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示 字典一般用来保存一个人物或事务的完整信息 info_list = [ {&#39;name&#39;:&#34;亚索&#34;,&#39;age&#39;:20,&#34;sex&#34;:&#39;男&#39;}, {&#39;name&#39;:&#34;盖伦&#34;,&#39;age&#39;:20,&#34;sex&#34;:&#39;女&#39;}, {&#39;name&#39;:&#34;赵信&#34;,&#39;age&#39;:25,&#34;sex&#34;:&#39;男&#39;}, {&#39;name&#39;:&#34;武器大师&#34;,&#39;age&#39;:30,&#34;sex&#34;:&#39;男&#39;} ] # 定义变量保存要查询的人物名字 find_name = &#39;盖伦&#39; for i in info_list: # 临时变量i获取的是列表中一个一个的字典，通过get获取名字 if i."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -71,7 +71,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Wcu99 2021 </div>
+        <div class="by_farbox">&copy; Wcu99 2022 </div>
     </div>
 </div>
 <div class="main">
@@ -134,13 +134,13 @@
 <h4 id="如果存在提示并且退出循环如果不存在在循环整体结束后给出一个统一的提示">如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示</h4>
 <h4 id="字典一般用来保存一个人物或事务的完整信息">字典一般用来保存一个人物或事务的完整信息</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">info_list <span style="color:#f92672">=</span> [
-{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;西门二狗&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
-{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;上官翠花&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;女&#39;</span>},
-{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;公孙大猫&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">25</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
-{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;慕容饭桶&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>}
+{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;亚索&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
+{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;盖伦&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">20</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;女&#39;</span>},
+{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;赵信&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">25</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>},
+{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#34;武器大师&#34;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">30</span>,<span style="color:#e6db74">&#34;sex&#34;</span>:<span style="color:#e6db74">&#39;男&#39;</span>}
 ]
 <span style="color:#75715e"># 定义变量保存要查询的人物名字</span>
-find_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;上官翠花&#39;</span>
+find_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;盖伦&#39;</span>
 
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> info_list:
     <span style="color:#75715e"># 临时变量i获取的是列表中一个一个的字典，通过get获取名字</span>

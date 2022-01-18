@@ -16,13 +16,13 @@ draft: false
 
 ```python
 info_list = [
-{'name':"西门二狗",'age':20,"sex":'男'},
-{'name':"上官翠花",'age':20,"sex":'女'},
-{'name':"公孙大猫",'age':25,"sex":'男'},
-{'name':"慕容饭桶",'age':30,"sex":'男'}
+{'name':"亚索",'age':20,"sex":'男'},
+{'name':"盖伦",'age':20,"sex":'女'},
+{'name':"赵信",'age':25,"sex":'男'},
+{'name':"武器大师",'age':30,"sex":'男'}
 ]
 # 定义变量保存要查询的人物名字
-find_name = '上官翠花'
+find_name = '盖伦'
 
 for i in info_list:
     # 临时变量i获取的是列表中一个一个的字典，通过get获取名字
