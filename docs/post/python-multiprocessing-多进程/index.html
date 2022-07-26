@@ -36,9 +36,9 @@
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
 <meta name="twitter:title" content="Python multiprocessing库 多进程"/>
-<meta name="twitter:description" content="Python multiprocessing库 多进程 进程与线程的区别： 1.进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关 2.线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数 3.线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立
-运用的场景： 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
-multiprocessing库与thread 1."/>
+<meta name="twitter:description" content="进程与线程的区别：
+进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关 线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数 线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立 运用的场景： 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
+multiprocessing库与thread 实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用 若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取 multiprocessing.thread1 -----&gt;list1 multiprocessing."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -130,16 +130,19 @@ multiprocessing库与thread 1."/>
                 
             </div>
 
-            <h2 id="python-multiprocessing库-多进程">Python multiprocessing库 多进程</h2>
-<p>进程与线程的区别：
-1.进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关
-2.线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数
-3.线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立</p>
+            <p>进程与线程的区别：</p>
+<ol>
+<li>进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关</li>
+<li>线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数</li>
+<li>线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立</li>
+</ol>
 <p>运用的场景：
 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度</p>
 <h2 id="multiprocessing库与thread"><strong>multiprocessing库与thread</strong></h2>
-<p>1.实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用
-2.若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取</p>
+<ol>
+<li>实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用</li>
+<li>若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取</li>
+</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    multiprocessing<span style="color:#f92672">.</span>thread1 <span style="color:#f92672">-----&gt;</span>list1
 </span></span><span style="display:flex;"><span>    multiprocessing<span style="color:#f92672">.</span>thread2 <span style="color:#f92672">-----&gt;</span>list2
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">....</span>
@@ -148,8 +151,8 @@ multiprocessing库与thread 1."/>
 </span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading1 <span style="color:#f92672">-----&gt;</span>list1
 </span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading2 <span style="color:#f92672">-----&gt;</span>list1
 </span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading3 <span style="color:#f92672">-----&gt;</span>list2
-</span></span></code></pre></div><h2 id="简易用法"><strong>简易用法</strong></h2>
-<h2 id="1首先导入库"><em><strong>1.首先导入库</strong></em></h2>
+</span></span></code></pre></div><h2 id="一多进程简易用法"><strong>一、多进程简易用法</strong></h2>
+<h3 id="1首先导入库"><strong>1.首先导入库</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">​</span>	<span style="color:#f92672">import</span> multiprocessing
 </span></span></code></pre></div><h2 id="2定义将要丢入multiprocessing的函数"><em><strong>2.定义将要丢入multiprocessing的函数</strong></em></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
@@ -160,11 +163,28 @@ multiprocessing库与thread 1."/>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
 </span></span><span style="display:flex;"><span>        i<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>test, args<span style="color:#f92672">=</span>(arg,))
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#jobs 进程池</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#for i in range(num) 启动</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#i+=num 进程池的数量</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#jobs.append(p) 把进程p放进进程池，进程池的数量为i+=num</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#start 启动程序</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jobs 进程池</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># for i in range(num) 启动</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># i+=num 进程池的数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jobs.append(p) 把进程p放进进程池，进程池的数量为i+=num</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># start 启动程序</span>
+</span></span></code></pre></div><h2 id="二多线程简易用法"><strong>二、多线程简易用法</strong></h2>
+<h3 id="1首先导入库-1"><strong>1.首先导入库</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">from</span> multiprocessing.dummy <span style="color:#f92672">import</span> Pool <span style="color:#66d9ef">as</span> ThreadPool
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#从multiprocessing的dummy导入Pool方法  as 后面是别名，可任意取</span>
+</span></span></code></pre></div><h3 id="2定义将要丢入pool的函数"><strong>2.定义将要丢入Pool的函数</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span></code></pre></div><h3 id="3调用-1"><strong>3.调用</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> ThreadPool(processes<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>map(proce, sqlResult)
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># processes=num  num为线程数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># map方法放入函数及函数的参数，如入参有多个的情况。可将map换为apply</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 关闭进程池（pool），使其不再接受新的任务</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 主进程阻塞等待子进程的退出， join方法要在close或terminate之后使用</span>
 </span></span></code></pre></div>
         </div>
         <div class="post-footer">
