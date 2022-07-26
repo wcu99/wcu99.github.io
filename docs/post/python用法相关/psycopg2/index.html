@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark"><head>
+    <title> Wcu | Python psycopg2 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="记录一些学习笔记">
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+    
+    <link rel="stylesheet"
+          href="https://wcu99.github.io/css/style.min.ee660ba8d69bc4ac1dee44ba152a17bb18096f21c21645fa172af75b1b794e80.css"
+          integrity="sha256-7mYLqNabxKwd7kS6FSoXuxgJbyHCFkX6Fyr3Wxt5ToA="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://wcu99.github.io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wcu99.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
+
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/psycopg2/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://wcu99.github.io/js/anatole-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js"
+            integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
+
+<meta name="twitter:title" content="Python psycopg2"/>
+<meta name="twitter:description" content="学习背景 工作中常用到的数据库是PostgreSQL，在编写python脚本的时候免不了要连接数据库进行数据交换。需要一个第三方库来实现需求，于是发现了psycopg2&hellip;
+安装方法 pip install psycopg2 使用pip进行安装，一般将pip升级到最新版本后，直接安装不会出现问题 如果使用pycharm，也可以在interpre里面进行安装 import psycopg2 --&gt;&gt;&gt; 安装完成后试着import，出现&ndash;&raquo;就是成功了"/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://wcu99.github.io/images/3.jpg" alt="profile picture">
+            <h3 title=""><a href="/">去码头整点薯条吧</a></h3>
+            <div class="description">
+                <p>记录一些学习笔记</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="" rel="me" aria-label="">
+                    <i class=" fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/wcu99" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:1694433099@qq.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Wcu 2022 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">主页</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">归档</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">关于</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>Python psycopg2</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Thu, May 5, 2022</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
+                
+            </div>
+
+            <h2 id="学习背景"><strong>学习背景</strong></h2>
+<p>工作中常用到的数据库是PostgreSQL，在编写python脚本的时候免不了要连接数据库进行数据交换。需要一个第三方库来实现需求，于是发现了psycopg2&hellip;</p>
+<h2 id="安装方法"><strong>安装方法</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    pip install psycopg2
+</span></span></code></pre></div><ol>
+<li>使用pip进行安装，一般将pip升级到最新版本后，直接安装不会出现问题</li>
+<li>如果使用pycharm，也可以在interpre里面进行安装</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">import</span> psycopg2
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--&gt;&gt;&gt;</span>
+</span></span></code></pre></div><p>安装完成后试着import，出现&ndash;&raquo;就是成功了</p>
+<h2 id="使用方法--查询"><strong>使用方法&ndash;查询</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">import</span> psycopg2
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 创建一个连接，分别填上数据库的databases、user、password、host、port信息</span>
+</span></span><span style="display:flex;"><span>    conn <span style="color:#f92672">=</span> psycopg2<span style="color:#f92672">.</span>connect(database<span style="color:#f92672">=</span>databases, user<span style="color:#f92672">=</span>users, password<span style="color:#f92672">=</span>passwords,
+</span></span><span style="display:flex;"><span>                        host<span style="color:#f92672">=</span>hosts, port<span style="color:#f92672">=</span>ports)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 创建一个cursor()方法</span>
+</span></span><span style="display:flex;"><span>    opt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 创建一个或多个sql语句</span>
+</span></span><span style="display:flex;"><span>    sqlTest <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;select * from Schemas.table&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 用execute执行sql语句</span>
+</span></span><span style="display:flex;"><span>    opt<span style="color:#f92672">.</span>execute(sqlTest)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 使用fetchall将sql结果print出来</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>] result <span style="color:#f92672">=</span> opt<span style="color:#f92672">.</span>fetchall()
+</span></span><span style="display:flex;"><span>    print(result)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 如果sql的结果仅一个，可以将fetchall改为fetchone</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">2</span>] result <span style="color:#f92672">=</span> opt<span style="color:#f92672">.</span>fetchone()
+</span></span><span style="display:flex;"><span>    print(result)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 正常返回的数据类型为元组，tuple</span>
+</span></span><span style="display:flex;"><span>    print(type(result))
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--&gt;&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#e6db74">&#39;class&#39;</span><span style="color:#f92672">&gt;</span> :tuple
+</span></span></code></pre></div><p>psycopg2自己暂时只用到查询方法，后面继续学习其他使用场景</p>
+<h2 id="待续"><strong>待续。。。</strong></h2>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/jquery.min.fbe301dd6883c65e7239a10ab4a0bf2fac3d44a19284226d4062b0c7d773c46a.js"
+        integrity="sha256-&#43;&#43;MB3WiDxl5yOaEKtKC/L6w9RKGShCJtQGKwx9dzxGo="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/bundle.min.851d092fdf9f79a0ad4f9d05360d0928fd8f817b7f5df84a4e1a43dc936bc398.js"
+        integrity="sha256-hR0JL9&#43;feaCtT50FNg0JKP2PgXt/XfhKThpD3JNrw5g="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
