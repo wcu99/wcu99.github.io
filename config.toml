@@ -68,7 +68,7 @@ url = "mailto:1694433099@qq.com"
   name = "归档"
   weight = 200
   identifier = "posts"
-  url = "/post/"
+  url = "/post/test/"
 
   [[menu.main]]
   name = "关于"
