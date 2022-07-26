@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark"><head>
+    <title> Wcu99 | Python multiprocessing库 多进程 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="记录一些学习笔记">
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+    
+    <link rel="stylesheet"
+          href="https://wcu99.github.io/css/style.min.ee660ba8d69bc4ac1dee44ba152a17bb18096f21c21645fa172af75b1b794e80.css"
+          integrity="sha256-7mYLqNabxKwd7kS6FSoXuxgJbyHCFkX6Fyr3Wxt5ToA="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://wcu99.github.io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wcu99.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
+
+    <link rel="canonical" href="https://wcu99.github.io/post/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://wcu99.github.io/js/anatole-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js"
+            integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
+
+<meta name="twitter:title" content="Python multiprocessing库 多进程"/>
+<meta name="twitter:description" content="1.首先导入库
+​	Import multiprocessing
+2.定义将要丢入multiprocessing的函数
+​	def test():
+3.调用
+if __name__==&#39;__main__&#39;:"/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://wcu99.github.io/images/3.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Wcu99</a></h3>
+            <div class="description">
+                <p>记录一些学习笔记</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="" rel="me" aria-label="">
+                    <i class=" fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/wcu99" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:1694433099@qq.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Wcu99 2022 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">主页</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">归档</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">关于</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>Python multiprocessing库 多进程</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Wed, Jun 8, 2022</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
+                
+            </div>
+
+            <p>1.首先导入库</p>
+<p>​	<code>Import multiprocessing</code></p>
+<p>2.定义将要丢入multiprocessing的函数</p>
+<p>​	<code>def test():</code></p>
+<p>3.调用</p>
+<p><code>if __name__=='__main__':</code></p>
+<p>​    <code>jobs=[]</code></p>
+<p>​    <code>for i in range(5):</code></p>
+<p>​        	<code>i+=1</code></p>
+<p>​        	<code>p = multiprocessing.Process(target=函数,args=(函数的入参))</code></p>
+<p>​        	<code>jobs.append(p)</code></p>
+<p>​        	<code>p.start()</code></p>
+<p>&ldquo;jobs&rdquo; 进程池</p>
+<p>&ldquo;for i in range(num)&rdquo; 启动</p>
+<p>&ldquo;i+=num&rdquo; 进程池的数量</p>
+<p>&ldquo;jobs.append(p)&rdquo; 把进程p放进进程池，进程池的数量为i+=num</p>
+<p>&ldquo;start&rdquo; 启动程序</p>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/jquery.min.fbe301dd6883c65e7239a10ab4a0bf2fac3d44a19284226d4062b0c7d773c46a.js"
+        integrity="sha256-&#43;&#43;MB3WiDxl5yOaEKtKC/L6w9RKGShCJtQGKwx9dzxGo="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/bundle.min.851d092fdf9f79a0ad4f9d05360d0928fd8f817b7f5df84a4e1a43dc936bc398.js"
+        integrity="sha256-hR0JL9&#43;feaCtT50FNg0JKP2PgXt/XfhKThpD3JNrw5g="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
