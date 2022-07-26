@@ -28,16 +28,16 @@ draft: false
     thread.threading3 ----->list2
 ```
 ## **一、多进程简易用法**
-### **1.首先导入库**
+#### **1.首先导入库**
 ```python
 ​	import multiprocessing
 ```
-## ***2.定义将要丢入multiprocessing的函数***
+#### **2.定义将要丢入multiprocessing的函数**
 ```python
    def test(arg):
     return
 ```
-## ***3.调用***
+#### **3.调用**
 ```python
    if __name__ == '__main__'
     jobs = []
@@ -52,18 +52,18 @@ draft: false
 ```
 
 ## **二、多线程简易用法**
-### **1.首先导入库**
+#### **1.首先导入库**
 ```python
     from multiprocessing.dummy import Pool as ThreadPool
     #从multiprocessing的dummy导入Pool方法  as 后面是别名，可任意取
 ```
-### **2.定义将要丢入Pool的函数**
+#### **2.定义将要丢入Pool的函数**
 ```python
    def test(arg):
     return
 ```
 
-### **3.调用**
+#### **3.调用**
 ```python
    if __name__ == '__main__':
     p = ThreadPool(processes=5)

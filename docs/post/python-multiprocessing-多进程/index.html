@@ -152,12 +152,12 @@ multiprocessing库与thread 实际项目中尝试用过一次thread，但效果�
 </span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading2 <span style="color:#f92672">-----&gt;</span>list1
 </span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading3 <span style="color:#f92672">-----&gt;</span>list2
 </span></span></code></pre></div><h2 id="一多进程简易用法"><strong>一、多进程简易用法</strong></h2>
-<h3 id="1首先导入库"><strong>1.首先导入库</strong></h3>
+<h4 id="1首先导入库"><strong>1.首先导入库</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">​</span>	<span style="color:#f92672">import</span> multiprocessing
-</span></span></code></pre></div><h2 id="2定义将要丢入multiprocessing的函数"><em><strong>2.定义将要丢入multiprocessing的函数</strong></em></h2>
+</span></span></code></pre></div><h4 id="2定义将要丢入multiprocessing的函数"><strong>2.定义将要丢入multiprocessing的函数</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
-</span></span></code></pre></div><h2 id="3调用"><em><strong>3.调用</strong></em></h2>
+</span></span></code></pre></div><h4 id="3调用"><strong>3.调用</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>
 </span></span><span style="display:flex;"><span>    jobs <span style="color:#f92672">=</span> []
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
@@ -169,13 +169,13 @@ multiprocessing库与thread 实际项目中尝试用过一次thread，但效果�
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># jobs.append(p) 把进程p放进进程池，进程池的数量为i+=num</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># start 启动程序</span>
 </span></span></code></pre></div><h2 id="二多线程简易用法"><strong>二、多线程简易用法</strong></h2>
-<h3 id="1首先导入库-1"><strong>1.首先导入库</strong></h3>
+<h4 id="1首先导入库-1"><strong>1.首先导入库</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">from</span> multiprocessing.dummy <span style="color:#f92672">import</span> Pool <span style="color:#66d9ef">as</span> ThreadPool
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">#从multiprocessing的dummy导入Pool方法  as 后面是别名，可任意取</span>
-</span></span></code></pre></div><h3 id="2定义将要丢入pool的函数"><strong>2.定义将要丢入Pool的函数</strong></h3>
+</span></span></code></pre></div><h4 id="2定义将要丢入pool的函数"><strong>2.定义将要丢入Pool的函数</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
-</span></span></code></pre></div><h3 id="3调用-1"><strong>3.调用</strong></h3>
+</span></span></code></pre></div><h4 id="3调用-1"><strong>3.调用</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
 </span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> ThreadPool(processes<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
 </span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>map(proce, sqlResult)
