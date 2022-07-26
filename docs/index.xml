@@ -79,10 +79,10 @@ https://desktop.github.com/
     
     <item>
       <title>接口测试笔记01</title>
-      <link>https://wcu99.github.io/post/test/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</link>
+      <link>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</link>
       <pubDate>Mon, 06 Apr 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/test/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</guid>
+      <guid>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</guid>
       <description>接口测试 A、是什么？ 测试后端实现是否符合接口规范
 B、为什么？ 程序安全、效率
 C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看响应
