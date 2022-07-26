@@ -1,7 +1,7 @@
 ---
 
-title: Python multiprocessing库 多进程
-date: 2022-06-08T12:22:45+08:00
+title: Python multiprocessing 多进/线程
+date: 2022-04-12T12:22:45+08:00
 draft: false
 
 ---
@@ -14,7 +14,7 @@ draft: false
 运用的场景：
 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
 
-## **multiprocessing库与thread**
+## **multiprocessing与thread**
 1. 实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用
 2. 若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取
 ```python

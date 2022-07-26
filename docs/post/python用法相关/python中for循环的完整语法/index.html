@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu | About </title>
+    <title> Wcu | python中for循环的完整语法 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/about/">
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/">
 
     
     
@@ -35,8 +35,10 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Hugo, the world&#39;s fastest framework for building websites"/>
+<meta name="twitter:title" content="python中for循环的完整语法"/>
+<meta name="twitter:description" content="python中for循环的完整语法 #for循环的完整语法,for&hellip;else语法 #1.作用： 遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分
+#2.格式： for 临时变量 in 容器:
+​	对临时变量的处理"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -91,7 +93,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/about/"
                         
                    title="">关于</a></li>
@@ -117,12 +119,58 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>About</h3>
+                <h3>python中for循环的完整语法</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Fri, Mar 27, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
                 
             </div>
 
-            <p>折而不挠</p>
+            <h3 id="python中for循环的完整语法">python中for循环的完整语法</h3>
+<h4 id="for循环的完整语法forelse语法">#for循环的完整语法,for&hellip;else语法</h4>
+<h4 id="1作用">#1.作用：</h4>
+<p>遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分</p>
+<h4 id="2格式">#2.格式：</h4>
+<p>for 临时变量 in 容器:</p>
+<p>​	对临时变量的处理</p>
+<p>​	满足条件时，执行break语句</p>
+<p>else:</p>
+<p>​	在上面for循环中没有执行break语句，容器遍历完，一定会执行else部分</p>
+<h4 id="例子">例子</h4>
+<pre tabindex="0"><code>#定义列表
 
+info_list = [10,20,30,40,50,60]
+
+#使用for循环完整语法格式遍历列表
+
+​	查找数据30
+
+​	如果找到30，停止遍历
+
+​	如果容器遍历完成也没有找到，结束
+
+find_data = 30
+
+for value in info_list:
+
+​	print(value)
+
+​	if value==find_data:
+
+​	print(value)
+
+  #已经找到数据，停止遍历
+
+​	break
+
+else:
+
+​	print(“没有找到需要的数据”)
+</code></pre>
         </div>
         <div class="post-footer">
             <div class="info">
@@ -131,6 +179,8 @@
             </div>
         </div>
 
+        
+            
         
     </div>
 

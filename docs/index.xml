@@ -6,34 +6,34 @@
     <description>Recent content on 一起成长吧</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 08 Jun 2022 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 12:22:45 +0800</lastBuildDate><atom:link href="https://wcu99.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python multiprocessing库 多进程</title>
-      <link>https://wcu99.github.io/post/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
-      <pubDate>Wed, 08 Jun 2022 12:22:45 +0800</pubDate>
+      <title>Python multiprocessing 多进/线程</title>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Tue, 12 Apr 2022 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
       <description>进程与线程的区别：
 进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关 线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数 线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立 运用的场景： 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
-multiprocessing库与thread 实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用 若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取 multiprocessing.thread1 -----&amp;gt;list1 multiprocessing.</description>
+multiprocessing与thread 实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用 若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取 multiprocessing.thread1 -----&amp;gt;list1 multiprocessing.</description>
     </item>
     
     <item>
       <title>Python中比较日期</title>
-      <link>https://wcu99.github.io/post/loading/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%AD%E6%AF%94%E8%BE%83%E6%97%A5%E6%9C%9F/</link>
       <pubDate>Wed, 08 Dec 2021 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/loading/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%AD%E6%AF%94%E8%BE%83%E6%97%A5%E6%9C%9F/</guid>
       <description>datetime 方法 ex： star_time = 2021-10 end_time = 2022-12
 import datetime import time</description>
     </item>
     
     <item>
       <title>python环境搭建selenium自动化测试框架</title>
-      <link>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Mon, 07 Sep 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/%E5%9F%BA%E4%BA%8Epython%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAselenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</guid>
       <description>1.环境搭建 基于python环境搭建 1.python开发环境
 2.安装selenium
 3.安装浏览器
@@ -44,10 +44,10 @@ pip工具 pip是一个通用的python包管理工具，提供了对python包的�
     
     <item>
       <title>利用GitHubdesktop与pycharm更新博客文章</title>
-      <link>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
+      <link>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
       <pubDate>Thu, 11 Jun 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
+      <guid>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/%E5%88%A9%E7%94%A8githubdesktop%E4%B8%8Epycharm%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
       <description>前言 ​	之前分别介绍过如何在Windows和macos下搭建基于Hugo的静态博客，方法是部署到GitHub上实现的。这次来具体聊聊怎么用GitHub桌面客户端（GitHub desktop）配合python可视化工具（这边用的是pycharm）实现对博客进行修改，上传，删除。
 1.安装GitHub desktop 用搜索引擎搜索github desktop即可，以下为网址
 https://desktop.github.com/
@@ -56,10 +56,10 @@ https://desktop.github.com/
     
     <item>
       <title>python中实现for循环遍历四大容器</title>
-      <link>https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Fri, 15 May 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E5%AE%9E%E7%8E%B0for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8/</guid>
       <description>实现for循环遍历四大容器 #for循环 #作用：可以让指定的代码重复执行，可以循环遍历容器中的数据（从容器中把数据一个一个取出）
 #格式：for 临时变量 in 容器：
 ​	对临时变量的处理
@@ -68,10 +68,10 @@ https://desktop.github.com/
     
     <item>
       <title>PYTHON中的四种容器</title>
-      <link>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Tue, 28 Apr 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%AD%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%B9%E5%99%A8/</guid>
       <description>PYTHON中的四种容器 列表list
 元组Tuple
 字典Ddict
@@ -81,19 +81,19 @@ https://desktop.github.com/
     
     <item>
       <title>python中for循环完整语法应用场景的例子</title>
-      <link>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</link>
       <pubDate>Wed, 08 Apr 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</guid>
       <description>目标： python中for循环完整语法应用场景的例子 在遍历嵌套的数据类型时，例如：一个列表中包含了多个字典 需求：判断某一个字典中是否存在指定的值， 如果存在，提示并且退出循环；如果不存在，在循环整体结束后，给出一个统一的提示 字典一般用来保存一个人物或事务的完整信息 info_list = [ {&amp;#39;name&amp;#39;:&amp;#34;亚索&amp;#34;,&amp;#39;age&amp;#39;:20,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;盖伦&amp;#34;,&amp;#39;age&amp;#39;:20,&amp;#34;sex&amp;#34;:&amp;#39;女&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;赵信&amp;#34;,&amp;#39;age&amp;#39;:25,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;}, {&amp;#39;name&amp;#39;:&amp;#34;武器大师&amp;#34;,&amp;#39;age&amp;#39;:30,&amp;#34;sex&amp;#34;:&amp;#39;男&amp;#39;} ] # 定义变量保存要查询的人物名字 find_name = &amp;#39;盖伦&amp;#39; for i in info_list: # 临时变量i获取的是列表中一个一个的字典，通过get获取名字 if i.</description>
     </item>
     
     <item>
       <title>接口测试笔记01</title>
-      <link>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</link>
+      <link>https://wcu99.github.io/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</link>
       <pubDate>Mon, 06 Apr 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</guid>
+      <guid>https://wcu99.github.io/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/</guid>
       <description>接口测试 A、是什么？ 测试后端实现是否符合接口规范
 B、为什么？ 程序安全、效率
 C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看响应
@@ -104,10 +104,10 @@ C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看�
     
     <item>
       <title>python中for循环的完整语法</title>
-      <link>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</link>
+      <link>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Fri, 27 Mar 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</guid>
+      <guid>https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%ADfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95/</guid>
       <description>python中for循环的完整语法 #for循环的完整语法,for&amp;hellip;else语法 #1.作用： 遍历数据时，使用的语法格式，满足条件时执行break语句提前终止循环，不执行break语句，则会执行else部分
 #2.格式： for 临时变量 in 容器:
 ​	对临时变量的处理</description>
@@ -115,10 +115,10 @@ C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看�
     
     <item>
       <title>Windows环境下搭建Hugo的个人博客</title>
-      <link>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Thu, 13 Feb 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接
 一、（下载hugo） 1、hugo官方下载地址https://github.com/gohugoio/hugo/releases
 2、创建文件夹。此处举例：F盘创建 hugo/bin，将解压后的**hugo.exe放到bin**目录下。
@@ -128,10 +128,10 @@ $ hugo version</description>
     
     <item>
       <title>MACOS环境hugo搭建的个人博客</title>
-      <link>https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 01 Feb 2020 12:22:45 +0800</pubDate>
       
-      <guid>https://wcu99.github.io/post/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/macos%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>概述 Hugo 是基于go语言搭建起来的一个静态博客
 搭建前的准备： 一、Mac os下推荐使用brew这个工具进行安装，下文使用到的也是brew命令安装Hugo。 二、安装Hugo 打开终端，使用命令：brew install Hugo，等待进度条结束即可。</description>
     </item>

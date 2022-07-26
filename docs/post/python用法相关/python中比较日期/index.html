@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu | About </title>
+    <title> Wcu | Python中比较日期 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/about/">
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python%E4%B8%AD%E6%AF%94%E8%BE%83%E6%97%A5%E6%9C%9F/">
 
     
     
@@ -35,8 +35,9 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Hugo, the world&#39;s fastest framework for building websites"/>
+<meta name="twitter:title" content="Python中比较日期"/>
+<meta name="twitter:description" content="datetime 方法 ex： star_time = 2021-10 end_time = 2022-12
+import datetime import time"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -91,7 +92,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/about/"
                         
                    title="">关于</a></li>
@@ -117,11 +118,35 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>About</h3>
+                <h3>Python中比较日期</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Wed, Dec 8, 2021</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
                 
             </div>
 
-            <p>折而不挠</p>
+            <h2 id="datetime-方法">datetime 方法</h2>
+<p>ex：
+star_time = 2021-10
+end_time = 2022-12</p>
+<p>import datetime
+import time</p>
+<p>star_time = time.strptime(star_time, &lsquo;&rsquo;%Y-%m&rsquo;)
+end_time = time.strptime(end_time, &ldquo;&quot;%Y-%m&rdquo;)</p>
+<p>if start_time &lt;= end_time:
+print(&quot; &ldquo;)
+else:
+print(&rdquo; &ldquo;)</p>
+<h2 id="replace-方法">replace 方法</h2>
+<p>ex：
+star_time = 2021-10
+end_time = 2022-12
+star_time = star_time.replace(&rdquo;-&quot;, &quot; &quot; )
+end_time = end_time.replace(&quot;-&quot;, &quot; &ldquo;)</p>
 
         </div>
         <div class="post-footer">
@@ -131,6 +156,8 @@
             </div>
         </div>
 
+        
+            
         
     </div>
 

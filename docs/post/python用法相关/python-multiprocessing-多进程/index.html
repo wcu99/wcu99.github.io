@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark"><head>
+    <title> Wcu | Python multiprocessing 多进/线程 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="记录一些学习笔记">
+    <meta name="google-site-verification" content="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">
+    
+    <link rel="stylesheet"
+          href="https://wcu99.github.io/css/style.min.ee660ba8d69bc4ac1dee44ba152a17bb18096f21c21645fa172af75b1b794e80.css"
+          integrity="sha256-7mYLqNabxKwd7kS6FSoXuxgJbyHCFkX6Fyr3Wxt5ToA="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://wcu99.github.io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wcu99.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
+
+    <link rel="canonical" href="https://wcu99.github.io/post/python%E7%94%A8%E6%B3%95%E7%9B%B8%E5%85%B3/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://wcu99.github.io/js/anatole-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js"
+            integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
+
+<meta name="twitter:title" content="Python multiprocessing 多进/线程"/>
+<meta name="twitter:description" content="进程与线程的区别：
+进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关 线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数 线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立 运用的场景： 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
+multiprocessing与thread 实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用 若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取 multiprocessing.thread1 -----&gt;list1 multiprocessing."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://wcu99.github.io/images/3.jpg" alt="profile picture">
+            <h3 title=""><a href="/">去码头整点薯条吧</a></h3>
+            <div class="description">
+                <p>记录一些学习笔记</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="" rel="me" aria-label="">
+                    <i class=" fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/wcu99" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:1694433099@qq.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Wcu 2022 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">主页</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">关于</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">归档</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>Python multiprocessing 多进/线程</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Tue, Apr 12, 2022</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
+                
+            </div>
+
+            <p>进程与线程的区别：</p>
+<ol>
+<li>进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关</li>
+<li>线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数</li>
+<li>线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立</li>
+</ol>
+<p>运用的场景：
+数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度</p>
+<h2 id="multiprocessing与thread"><strong>multiprocessing与thread</strong></h2>
+<ol>
+<li>实际项目中尝试用过一次thread，但效果不理想，转而学习multiprocessing的使用</li>
+<li>若一份list原数据需要切分后分别传入相应的线程，使用thread时需要指定分配；multiprocessing可自己读取</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    multiprocessing<span style="color:#f92672">.</span>thread1 <span style="color:#f92672">-----&gt;</span>list1
+</span></span><span style="display:flex;"><span>    multiprocessing<span style="color:#f92672">.</span>thread2 <span style="color:#f92672">-----&gt;</span>list2
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">....</span>
+</span></span><span style="display:flex;"><span>    multiprocessing<span style="color:#f92672">.</span>thread3 <span style="color:#f92672">-----&gt;</span>list3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading1 <span style="color:#f92672">-----&gt;</span>list1
+</span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading2 <span style="color:#f92672">-----&gt;</span>list1
+</span></span><span style="display:flex;"><span>    thread<span style="color:#f92672">.</span>threading3 <span style="color:#f92672">-----&gt;</span>list2
+</span></span></code></pre></div><h2 id="一多进程简易用法"><strong>一、多进程简易用法</strong></h2>
+<h4 id="1首先导入库"><strong>1.首先导入库</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">​</span>	<span style="color:#f92672">import</span> multiprocessing
+</span></span></code></pre></div><h4 id="2定义将要丢入multiprocessing的函数"><strong>2.定义将要丢入multiprocessing的函数</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span></code></pre></div><h4 id="3调用"><strong>3.调用</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>
+</span></span><span style="display:flex;"><span>    jobs <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> multiprocessing<span style="color:#f92672">.</span>Process(target<span style="color:#f92672">=</span>test, args<span style="color:#f92672">=</span>(arg,))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jobs 进程池</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># for i in range(num) 启动</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># i+=num 进程池的数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jobs.append(p) 把进程p放进进程池，进程池的数量为i+=num</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># start 启动程序</span>
+</span></span></code></pre></div><h2 id="二多线程简易用法"><strong>二、多线程简易用法</strong></h2>
+<h4 id="1首先导入库-1"><strong>1.首先导入库</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#f92672">from</span> multiprocessing.dummy <span style="color:#f92672">import</span> Pool <span style="color:#66d9ef">as</span> ThreadPool
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#从multiprocessing的dummy导入Pool方法  as 后面是别名，可任意取</span>
+</span></span></code></pre></div><h4 id="2定义将要丢入pool的函数"><strong>2.定义将要丢入Pool的函数</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(arg):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span></code></pre></div><h4 id="3调用-1"><strong>3.调用</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> ThreadPool(processes<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>map(proce, sqlResult)
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># processes=num  num为线程数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># map方法放入函数及函数的参数，如入参有多个的情况。可将map换为apply</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 关闭进程池（pool），使其不再接受新的任务</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 主进程阻塞等待子进程的退出， join方法要在close或terminate之后使用</span>
+</span></span></code></pre></div>
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/jquery.min.fbe301dd6883c65e7239a10ab4a0bf2fac3d44a19284226d4062b0c7d773c46a.js"
+        integrity="sha256-&#43;&#43;MB3WiDxl5yOaEKtKC/L6w9RKGShCJtQGKwx9dzxGo="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/bundle.min.851d092fdf9f79a0ad4f9d05360d0928fd8f817b7f5df84a4e1a43dc936bc398.js"
+        integrity="sha256-hR0JL9&#43;feaCtT50FNg0JKP2PgXt/XfhKThpD3JNrw5g="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://wcu99.github.io/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

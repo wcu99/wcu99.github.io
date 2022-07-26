@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu | About </title>
+    <title> Wcu | Windows环境下搭建Hugo的个人博客 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/about/">
+    <link rel="canonical" href="https://wcu99.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%9B%B4%E6%96%B0%E7%9B%B8%E5%85%B3/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     
     
@@ -35,8 +35,12 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Hugo, the world&#39;s fastest framework for building websites"/>
+<meta name="twitter:title" content="Windows环境下搭建Hugo的个人博客"/>
+<meta name="twitter:description" content="概述 之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接
+一、（下载hugo） 1、hugo官方下载地址https://github.com/gohugoio/hugo/releases
+2、创建文件夹。此处举例：F盘创建 hugo/bin，将解压后的**hugo.exe放到bin**目录下。
+3、配置系统环境变量。将**F:\hugo\bin加到path**变量中，以上设置好后，就可以在cmd中查看是否安装成功。执行命令：
+$ hugo version"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -91,7 +95,7 @@
                    title="">主页</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/about/"
                         
                    title="">关于</a></li>
@@ -117,11 +121,73 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>About</h3>
+                <h3>Windows环境下搭建Hugo的个人博客</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Thu, Feb 13, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
                 
             </div>
 
-            <p>折而不挠</p>
+            <h2 id="概述">概述</h2>
+<p>之前写的一篇博客搭建是基于MacOS系统的，考虑到windows的受众面比较广泛，这里开一篇如何在windows上搭建博客，其中用到的方法和MacOS上大同小异，如若没看懂可以移步之前那篇，下文中会给出链接</p>
+<h2 id="一下载hugo">一、（下载hugo）</h2>
+<p>1、hugo官方下载地址https://github.com/gohugoio/hugo/releases</p>
+<p>2、创建文件夹。此处举例：F盘创建 <strong><code>hugo/bin</code></strong>，将解压后的**<code>hugo.exe</code><strong>放到</strong><code>bin</code>**目录下。</p>
+<p>3、配置系统环境变量。将**<code>F:\hugo\bin</code><strong>加到</strong>path**变量中，以上设置好后，就可以在cmd中查看是否安装成功。执行命令：</p>
+<blockquote>
+<p>$ <strong><code>hugo version</code></strong></p>
+</blockquote>
+<p>没返回报错即代表配置成功</p>
+<h2 id="二生成站点">二、生成站点</h2>
+<blockquote>
+<p>进入<code>F:\hugo</code>下，打开命令窗口,输入</p>
+</blockquote>
+<blockquote>
+<p>$ <strong><code>hugo new site</code></strong> 文件名称 (如<code>blog</code>)</p>
+</blockquote>
+<p>执行后，在hugo目录下就会生成一个 名叫<code>myblog</code>的站点文件夹</p>
+<p>进入<code>myblog</code>，显示以下目录结构：</p>
+<ul>
+<li>archetypes　(存放default.md，头文件格式，每次新建文章默认显示的头部信息在此修改)</li>
+<li>content 　　 (存放博客文章，markdown格式文件)</li>
+<li>data (存放自定义或者导入的模板)</li>
+<li>layouts (存放网站的数据模板)</li>
+<li>static (存放图片、css、js等静态资源)</li>
+<li>themes (存放主题文件，每个主题都是一个独立的文件夹)</li>
+<li>config.toml (网站配置文件)</li>
+</ul>
+<h2 id="三创建文章">三、创建文章</h2>
+<p>进入<strong>站点根目录</strong><code>myblog</code>下，执行命令：</p>
+<blockquote>
+<p>$ <strong><code>hugo new post/test.md</code></strong></p>
+</blockquote>
+<p>执行后，会自动在content/post下生成 test.md文件，打开可编辑内容(markdown编辑器推荐Typora</p>
+<p><strong>注意：文件头部的draft要改为false，这样部署后才能看到文章。</strong></p>
+<p>当前网站是没有任何内容的，需要下载个主题。</p>
+<h2 id="四下载主题">四、下载主题</h2>
+<blockquote>
+<p>$ <strong><code>git clone</code></strong> <a href="https://github.com/vaga/hugo-theme-m10c.git">https://github.com/vaga/hugo-theme-m10c.git</a> themes/m10c</p>
+<p>也可以直接下载压缩包解压到themes目录</p>
+</blockquote>
+<p>这样themes下就多了一个文件夹，文件夹名即为主题名称。此时可回到站点目录下打开`config.tom
+配置指定主题，如theme = “m10c” 没有theme参数就自己写上</p>
+<p><strong>站点根目录</strong>下，执行命令：</p>
+<blockquote>
+<p>hugo server &ndash;theme=m10c &ndash;buildDrafts</p>
+</blockquote>
+<p>其中 &ndash;theme 选项可以指定主题，–buildDrafts 包括标记为草稿</p>
+<p>执行后会显示</p>
+<blockquote>
+<p>Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop</p>
+</blockquote>
+<p>可访问：http://localhost:1313/ 查看效果</p>
+<h2 id="五部署到原创github上">五、部署到原创GitHub上</h2>
+<p>这一部分可以查看我之前写的在macos上的操作，大同小异，这里就不做赘述了。</p>
+<p>贴上地址：https://wcu99.github.io/post/%E5%9F%BA%E4%BA%8Ehogo%E6%90%AD%E5%BB%BA%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</p>
 
         </div>
         <div class="post-footer">
@@ -131,6 +197,8 @@
             </div>
         </div>
 
+        
+            
         
     </div>
 
