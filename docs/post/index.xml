@@ -13,12 +13,9 @@
       <pubDate>Wed, 08 Jun 2022 12:22:45 +0800</pubDate>
       
       <guid>https://wcu99.github.io/post/python-multiprocessing-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
-      <description>1.首先导入库
-​	Import multiprocessing
-2.定义将要丢入multiprocessing的函数
-​	def test():
-3.调用
-if __name__==&#39;__main__&#39;:</description>
+      <description>Python multiprocessing库 多进程 进程与线程的区别： 1.进程使用的是本机CPU的核心数，因此进程的最大数量与本机CPU核心数相关 2.线程使用的是某个CPU核心，在此核心下创建线程，线程数理论上可以是任意数 3.线程中如果这个CPU核心挂了，那么下面的线程也会受到影响；进程相互独立
+运用的场景： 数据量较大时，依靠单线程效果不理想，建议加入多线程处理，以提高速度
+multiprocessing库与thread 1.</description>
     </item>
     
     <item>
