@@ -14,8 +14,8 @@ enableRobotsTXT = true
 googleAnalytics = "UA-123-45"
 
 [params]
-title = "Wcu99"
-author = "去码头整点薯条吧"
+title = "去码头整点薯条吧"
+author = "Wcu"
 description = "记录一些学习笔记"
 profilePicture = "images/3.jpg"
 keywords = ""
