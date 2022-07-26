@@ -4,4 +4,4 @@ description = "Hugo, the world's fastest framework for building websites"
 
 +++
 
-那就慢慢加油吧
+折而不挠

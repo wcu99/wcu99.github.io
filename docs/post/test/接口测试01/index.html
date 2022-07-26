@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" data-theme="dark"><head>
-    <title> Wcu99 | About </title>
+    <title> Wcu99 | 接口测试笔记01 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wcu99.github.io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wcu99.github.io/favicon-16x16.png">
 
-    <link rel="canonical" href="https://wcu99.github.io/about/">
+    <link rel="canonical" href="https://wcu99.github.io/post/test/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%9501/">
 
     
     
@@ -35,8 +35,13 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wcu99.github.io/images/3.jpg"/>
 
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Hugo, the world&#39;s fastest framework for building websites"/>
+<meta name="twitter:title" content="接口测试笔记01"/>
+<meta name="twitter:description" content="接口测试 A、是什么？ 测试后端实现是否符合接口规范
+B、为什么？ 程序安全、效率
+C、怎么用(实现流程) 模拟客户向服务器发送数据，然后查看响应
+要素1：定位服务器资源(通过URL实现:http://www.baidu.com|http://127.0.0.1:8000/资源路径)
+要素2：模拟用户提交数据
+要素3:查看响应的结果是否符合预期"/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -97,7 +102,7 @@
                    title="">归档</a></li>
         
             
-            <li><a class="current"
+            <li><a 
                    href="/about/"
                         
                    title="">关于</a></li>
@@ -117,11 +122,98 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>About</h3>
+                <h3>接口测试笔记01</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Mon, Apr 6, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">1分钟阅读时间</span>
+                    </div>
                 
             </div>
 
-            <p>折而不挠</p>
+            <h2 id="接口测试">接口测试</h2>
+<h4 id="a是什么">A、是什么？</h4>
+<p>测试后端实现是否符合接口规范</p>
+<h4 id="b为什么">B、为什么？</h4>
+<p>程序安全、效率</p>
+<h4 id="c怎么用实现流程">C、怎么用(实现流程)</h4>
+<p>模拟客户向服务器发送数据，然后查看响应</p>
+<p>要素1：定位服务器资源(通过URL实现:http://www.baidu.com|http://127.0.0.1:8000/资源路径)</p>
+<p>要素2：模拟用户提交数据</p>
+<p>要素3:查看响应的结果是否符合预期</p>
+<h2 id="基本概念">基本概念</h2>
+<p>客户端(Client):移动应用(IOS、Android、Web等应用)</p>
+<p>服务器(Server):为客户端提供服务、提供数据、提供资源的机器</p>
+<p>请求(Request):客户端向服务器索取数据的一种行为</p>
+<p>响应(Response):服务器对客户端的请求做出的反应，一般指返回数据给客户端</p>
+<h2 id="http协议">HTTP协议</h2>
+<h4 id="http协议概念">HTTP协议概念：</h4>
+<p>协议：计算机通信网络中两台计算机之间进行通信所必须遵守的规则或规定</p>
+<p>HTTP协议：超文本传输协议，是一种规定了浏览器和服务器之间的通信规则</p>
+<h4 id="url统一资源定位符">URL(统一资源定位符)</h4>
+<p>概念：互联网上资源的地址、位置。每一个资源都有一个唯一的URL</p>
+<p>格式：协议://主机地址/路径</p>
+<h4 id="d接口测试分类">D、接口测试分类</h4>
+<p>类型1：web接口测试  BS架构</p>
+<p>​		服务器接口测试：测试自己公司实现的接口</p>
+<p>​		第三方接口测试：测试别的公司实现的接口</p>
+<p>类型2：模块接口测试  CS架构</p>
+<h2 id="getpost请求">GET、POST请求</h2>
+<h4 id="get">GET</h4>
+<p>提交的数据显示在地址栏，不安全的；提交的数据量有限制；不重要的数据使用GET</p>
+<h4 id="post">POST</h4>
+<p>隐式提交数据，更安全数据量大小的限制；重要数据使用POST</p>
+<h2 id="数据格式">数据格式</h2>
+<p>键值对：?xx=11&amp;xx=222</p>
+<p>JSON数据：</p>
+<p>{</p>
+<p>&ldquo;属性名1&rdquo;:&ldquo;属性值&rdquo;,</p>
+<p>&ldquo;属性名2&rdquo;:&ldquo;属性值&rdquo;,</p>
+<p>&hellip;&hellip;</p>
+<p>}</p>
+<h2 id="接口测试插件">接口测试：插件</h2>
+<h4 id="类别">类别</h4>
+<p>火狐浏览器	RESTClient</p>
+<p>谷歌浏览器    Postman</p>
+<p>Java环境实现的测试工具: Jmeter</p>
+<h2 id="接口测试restful风格">接口测试：RESTful风格</h2>
+<h4 id="简介">简介：</h4>
+<p>RESTful风格，开发测试时，大家都会遵守一些默认的规范，这些都是约定俗成的，大家的习惯做法，非强制性的，RESTful风格就是其中一种。</p>
+<p>RESTful风格中规范了，URL的实现方式，提交的数据的实现方式，响应的数据的实现方法&hellip;.</p>
+<h4 id="作用">作用</h4>
+<p>为了程序的易读性和易维护性</p>
+<p>RESTful风格约束了接口操作的四种操作以及三个要素</p>
+<p>增：</p>
+<p>​	要素1：URL + POST</p>
+<p>​	要素2：多个数据</p>
+<p>​					方式1:URL?键=值&amp;键=值</p>
+<p>​					方式2:JSON格式</p>
+<p>​	要素3：200 | 201+添加的记录</p>
+<p>删：</p>
+<p>​	要素1：URL+GET|DELETE</p>
+<p>​	要素2：键=值&amp;键=值</p>
+<p>​	要素3：200|204+无</p>
+<p>改：</p>
+<p>​    要素1：URL+POST|PUT(更合适)</p>
+<p>​	要素2：</p>
+<p>​					方式1:URL?键=值&amp;键=值</p>
+<p>​					方式2:JSON格式</p>
+<p>​	要素3：200 | 201+修改后的记录</p>
+<p>查：</p>
+<p>​    要素1：URL + GET</p>
+<p>​	要素2：常用方式 URL?键=值&amp;键=值</p>
+<p>​	要素3：200+一条记录或多条记录</p>
+<h2 id="状态码">状态码:</h2>
+<p>状态码有三位数字组成，第一位数字定义了响应类型，有5种可能取值。</p>
+<p>1XX:指示信息&ndash;表示请求已经接受，继续处理</p>
+<p>2XX:成功&ndash;表示请求已被成功接收、理解、接受</p>
+<p>3XX:重定向&ndash;要完成请求必须更进一步的操作</p>
+<p>4XX:客户端错误&ndash;请求有语法错误或请求无法实现</p>
+<p>5XX:服务器端错误&ndash;服务器未能实现合法的请求</p>
+<p>404&mdash;&mdash;&mdash;&mdash;资源路径有误</p>
+<p>505&mdash;&mdash;&mdash;&mdash;-服务器异常</p>
 
         </div>
         <div class="post-footer">
@@ -131,6 +223,8 @@
             </div>
         </div>
 
+        
+            
         
     </div>
 
