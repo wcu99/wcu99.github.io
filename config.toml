@@ -16,7 +16,7 @@ googleAnalytics = "UA-123-45"
 [params]
 title = "Wcu99"
 author = "Wcu99"
-description = "记录一些学习笔记"
+description = "记录一些学习笔记，自娱自乐"
 profilePicture = "images/dog.jpg"
 keywords = ""
 # favicon = "favicons/favicon.ico"
@@ -68,13 +68,18 @@ url = "mailto:1694433099@qq.com"
   name = "归档"
   weight = 200
   identifier = "posts"
-  url = "/post/test/"
+  url = "/post/"
 
   [[menu.main]]
   name = "关于"
   weight = 300
   identifier = "about"
   url = "/about/"
+
+  [[menu.main]]
+  name = "test"
+  identifier = "测试"
+  url = "/post/test/"
 
 
 
